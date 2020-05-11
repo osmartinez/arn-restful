@@ -11,4 +11,9 @@ connection.on('connect', function (err) {
         console.log(`[${env}] Connected to database`);
     }
 });
+
+connection.on('error',function (err){
+    console.error(err)
+})
+
 module.exports = connection;

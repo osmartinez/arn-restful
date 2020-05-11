@@ -12,7 +12,8 @@ var config = {
             options: {
                 database: 'SistemaGlobalPRE',
                 rowCollectionOnDone: true,
-                useColumnNames: false
+                useColumnNames: false,
+                trustServerCertificate: true,
             }
         },
         //server details
@@ -35,7 +36,8 @@ var config = {
             options: {
                 database: 'SistemaGlobalPRE',
                 rowCollectionOnDone: true,
-                useColumnNames: false
+                useColumnNames: false,
+                trustServerCertificate: true,
             }
         },
         //server details
