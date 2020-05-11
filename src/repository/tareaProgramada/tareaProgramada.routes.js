@@ -1,5 +1,5 @@
 const TareaProgramadaRepository = require('./tareaProgramada.repository');
-const dbContext = require('../../Database/dbContext');
+const dbContext = require('../../database/dbContext');
 
 module.exports = function (router) {
 const tareaProgramadaRepository = TareaProgramadaRepository(dbContext);
