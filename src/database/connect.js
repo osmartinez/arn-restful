@@ -1,19 +1,14 @@
-var Connection = require('tedious').Connection;
-
+const sql = require('mssql')
 var env = process.env.NODE_ENV || 'development';
-env = env.trim()
-var config = require('../config')[env];
-var connection = new Connection(config.database);
-connection.on('connect', function (err) {
-    if (err) {
-        console.log(err);
-    } else {
-        console.log(`[${env}] Connected to database`);
-    }
-});
+var config = require('../config')[env].database;
+const poolPromise = new sql.ConnectionPool(config)
+  .connect()
+  .then(pool => {
+    console.log(`[${env}] Connected to database`)
+    return pool
+  })
+  .catch(err => console.error('Database Connection Failed! Bad Config: ', err))
 
-connection.on('error',function (err){
-    console.error(err)
-})
-
-module.exports = connection;
+module.exports = {
+  sql, poolPromise
+}

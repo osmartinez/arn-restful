@@ -2,42 +2,30 @@ var config = {
     development: {
         database: {
             server: 'localhost',
-            authentication: {
-                type: 'default',
-                options: {
-                    userName: 'sa',
-                    password: 'Oeseceaerre2'
-                }
-            },
-            options: {
-                database: 'SistemaGlobalPRE',
-                rowCollectionOnDone: true,
-                useColumnNames: false,
-                trustServerCertificate: true,
+            database: 'SistemaGlobalPRE',
+            user: 'sa',
+            password: 'Oeseceaerre2',
+            port: 1433,
+            options:{
+                enableArithAbort:false
             }
         },
         //server details
         server: {
             host: '127.0.0.1',
-            port: '8080'
+            port: '3000'
         }
     },
     production: {
         //db connection settings
         database: {
-            server: 'SQL01',
-            authentication: {
-                type: 'default',
-                options: {
-                    userName: 'sa',
-                    password: 'Arneplant20'
-                }
-            },
-            options: {
-                database: 'SistemaGlobalPRE',
-                rowCollectionOnDone: true,
-                useColumnNames: false,
-                trustServerCertificate: true,
+            server: 'sql01',
+            database: 'SistemaGlobalPRE',
+            user: 'sa',
+            password: 'Arneplant20',
+            port: 1433,
+            options:{
+                enableArithAbort:false
             }
         },
         //server details

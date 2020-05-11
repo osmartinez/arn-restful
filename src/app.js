@@ -1,17 +1,17 @@
-var express = require('express');
-var bodyParser = require('body-parser');
-var app = express();
+const express = require('express');
+const bodyParser = require('body-parser');
+const app = express();
 const config = require('./config')
-var env = process.env.NODE_ENV || 'development';
-env = env.trim()
-var port = process.env.port || config[env].server.port
-
-app.listen(port, () => {
-    console.log(`[${env}] REST service up and running!`);
-});
+const morgan = require('morgan')
+const env = process.env.NODE_ENV || 'development';
+const port = process.env.port || config[env].server.port
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-var router = require('./routes')();
- 
+app.use(morgan('dev'))
+const router = require('./routes')();
 app.use('/api', router);
+
+app.listen(port, () => {
+    console.log(`[${env}] REST service up and running on port ${port}!`);
+});

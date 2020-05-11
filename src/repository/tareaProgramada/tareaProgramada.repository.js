@@ -1,51 +1,93 @@
 
 var response = require('../../shared/response');
-var TYPES = require('tedious').TYPES;
+var TYPES = require('mssql').TYPES;
 
 function TareaProgramadaRepository(dbContext) {
 
-    function getTareasProgramadasEnMaquina(req, res, next) {
+    async function getTareasProgramadasEnMaquina(req, res, next) {
         const { codigoMaquina } = req.params
         if (!codigoMaquina) {
             return res.sendStatus(404);
         }
         else {
             var parameters = []
-            parameters.push({ name: 'CodigoMaquina', type: TYPES.NVarChar, val: codigoMaquina });
-            dbContext.post('SP_ObtenerTareasProgramadasMaquina', parameters, (err, data) => {
-                return res.json(response(data, err))
-            })
+            parameters.push({ name: 'CodigoMaquina', value: codigoMaquina });
+            try {
+                const result = await dbContext.execSp('SP_ObtenerTareasProgramadasMaquina', parameters)
+                return res.json(response(result))
+            } catch (err) {
+                res.sendStatus(500)
+            }
         }
     }
 
-    function programarTareaMaquina(req, res, next) {
+    async function programarTareaMaquina(req, res, next) {
         const { codigoMaquina, codigoEtiqueta } = req.body
         if (!codigoMaquina || !codigoEtiqueta) {
             return res.sendStatus(404);
         }
         else {
             var parameters = []
-            parameters.push({ name: 'CodigoMaquina', type: TYPES.NVarChar, val: codigoMaquina });
-            parameters.push({ name: 'CodigoEtiqueta', type: TYPES.NVarChar, val: codigoEtiqueta });
-            dbContext.post('SP_ProgramarTareaPDA', parameters, (err, data) => {
-                parameters =[]
-                parameters.push({ name: 'CodigoMaquina', type: TYPES.NVarChar, val: codigoMaquina });
-                if(!err){
-                    dbContext.post('SP_ObtenerTareasProgramadasMaquina', parameters, (err, data) => {
-                        res.json(response(data,err))
-                    })
-                }
-                else{
-                    return res.json(response(data, err))
-                }
-            })
+            parameters.push({ name: 'CodigoMaquina', value: codigoMaquina });
+            parameters.push({ name: 'CodigoEtiqueta', value: codigoEtiqueta });
+            try {
+                var result = await dbContext.execSp('SP_ProgramarTareaPDA', parameters)
+                parameters = []
+                parameters.push({ name: 'CodigoMaquina', value: codigoMaquina });
+                result = await dbContext.execSp('SP_ObtenerTareasProgramadasMaquina', parameters)
+                res.json(response(result))
+            } catch (err) {
+                console.log(err)
+                res.sendStatus(500)
+            }
         }
     }
 
+    async function consumirTareaMaquina(req, res, next) {
+        const { codigoMaquina, codigoEtiqueta } = req.body
+        if (!codigoMaquina || !codigoEtiqueta) {
+            return res.sendStatus(404);
+        }
+        else {
+            console.log()
+            var parameters = []
+            parameters.push({ name: 'CodigoMaquina', value: codigoMaquina });
+            parameters.push({ name: 'CodigoEtiqueta', value: codigoEtiqueta });
+            try {
+                var result = await dbContext.execSp('SP_ConsumirEtiqueta', parameters)
+                res.json(response(result))
+            } catch (err) {
+                console.log(err)
+                res.sendStatus(500)
+            }
+        }
+    }
+
+    async function desconsumirTareaMaquina(req, res, next) {
+        const { idMaquina, codigoEtiqueta } = req.body
+        if (!idMaquina || !codigoEtiqueta) {
+            return res.sendStatus(404);
+        }
+        else {
+            console.log()
+            var parameters = []
+            parameters.push({ name: 'IdMaquina', value: idMaquina });
+            parameters.push({ name: 'CodigosEtiquetas', value: codigoEtiqueta });
+            try {
+                var result = await dbContext.execSp('SP_DesconsumirEtiquetas', parameters)
+                res.json(response(result))
+            } catch (err) {
+                console.log(err)
+                res.sendStatus(500)
+            }
+        }
+    }
 
     return {
         getTareasProgramadasEnMaquina,
-        programarTareaMaquina
+        programarTareaMaquina,
+        consumirTareaMaquina,
+        desconsumirTareaMaquina,
     }
 }
 

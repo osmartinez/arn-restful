@@ -1,10 +1,12 @@
-module.exports = function(data, error){
-    if(error){
-        console.error(error)
-        return error;
+module.exports = function(data,multiple = true){
+    if(!multiple){
+        if(data.recordset.length == 0){
+            return {}
+        }
+        else{
+            return data.recordset[0]
+        }
     }
-    else
-    {
-        return data;
-    }
+
+    return data.recordset
 }
