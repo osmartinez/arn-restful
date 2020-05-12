@@ -1,5 +1,5 @@
 const sql = require('mssql')
-var env = process.env.NODE_ENV || 'development';
+var env = process.env.NODE_ENV || 'production';
 var config = require('../config')[env].database;
 const poolPromise = new sql.ConnectionPool(config)
   .connect()
