@@ -1,7 +1,7 @@
 var config = {
     development: {
         database: {
-            server: '192.168.0.109',
+            server: 'localhost',
             database: 'SistemaGlobalPRE',
             user: 'sa',
             password: 'Oeseceaerre2',

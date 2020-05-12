@@ -14,4 +14,13 @@ module.exports = function (router) {
 
     router.route('/ubicaciones/ubicarPrepaquete')
         .post(ubicacionRepository.ubicarPrepaquete);
+
+    router.route('/ubicaciones/vaciarUbicacion')
+        .post(ubicacionRepository.vaciarUbicacion);
+
+    router.route('/ubicaciones/vaciarAgrupacion')
+        .post(ubicacionRepository.vaciarAgrupacion);
+
+    router.route('/ubicaciones/agruparContenedor')
+        .post(ubicacionRepository.agruparContenedor);
 }
