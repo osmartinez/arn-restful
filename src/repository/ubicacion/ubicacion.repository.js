@@ -77,7 +77,6 @@ function UbicacionRepository(dbContext) {
         }
     }
 
-
     return {
         buscarPorCodigo,
         ubicarAgrupacion,
