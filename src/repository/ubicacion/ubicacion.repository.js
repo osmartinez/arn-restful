@@ -1,135 +1,36 @@
 
-var response = require('../../shared/response');
+const SP = require('./ubicacion.sp')
+const GenericRepository = require('../generic.repository')()
 
 function UbicacionRepository(dbContext) {
 
     async function buscarPorCodigo(req, res, next) {
-        const { codigoUbicacion } = req.params
-        if (!codigoUbicacion) {
-            return res.sendStatus(404);
-        }
-        else {
-            var parameters = []
-            parameters.push({ name: 'CodigoUbicacion', value: codigoUbicacion });
-            try {
-                const result = await dbContext.execSp('SP_BuscarUbicacionPorCodigo', parameters)
-                return res.json(response(result,multiple=false))
-            }catch (err) {
-                res.sendStatus(500)
-            }
-        }
+        GenericRepository.execute(dbContext, req.params, SP.Buscar, req,res,next)
     }
 
     async function ubicarAgrupacion(req, res, next) {
-        const { codigoUbicacion, codigoAgrupacion } = req.body
-        if (!codigoUbicacion || !codigoAgrupacion) {
-            return res.sendStatus(404);
-        }
-        else {
-            var parameters = []
-            parameters.push({ name: 'CodigoUbicacion', value: codigoUbicacion });
-            parameters.push({ name: 'CodigoAgrupacion', value: codigoAgrupacion });
-
-            try {
-                const result = await dbContext.execSp('SP_UbicarAgrupacion', parameters)
-                return res.json(response(result))
-            }catch (err) {
-                res.sendStatus(500)
-            }
-        }
+        GenericRepository.execute(dbContext, req.body, SP.UbicarAgrupacion, req,res,next)
     }
 
     async function ubicarContenedor(req, res, next) {
-        const { codigoUbicacion, codigoEtiqueta } = req.body
-        if (!codigoUbicacion || !codigoEtiqueta) {
-            return res.sendStatus(404);
-        }
-        else {
-            var parameters = []
-            parameters.push({ name: 'CodigoUbicacion', value: codigoUbicacion });
-            parameters.push({ name: 'CodigoEtiqueta', value: codigoEtiqueta });
-
-            try {
-                const result = await dbContext.execSp('SP_UbicarContenedor', parameters)
-                return res.json(response(result))
-            }catch (err) {
-                res.sendStatus(500)
-            }
-        }
+        GenericRepository.execute(dbContext, req.body, SP.UbicarContenedor, req,res,next)
     }
 
     async function agruparContenedor(req, res, next) {
-        const { codigoAgrupacion, codigoEtiqueta } = req.body
-        if (!codigoAgrupacion || !codigoEtiqueta) {
-            return res.sendStatus(404);
-        }
-        else {
-            var parameters = []
-            parameters.push({ name: 'CodigoAgrupacion', value: codigoAgrupacion });
-            parameters.push({ name: 'CodigoEtiqueta', value: codigoEtiqueta });
-
-            try {
-                const result = await dbContext.execSp('SP_AgruparContenedor', parameters)
-                return res.json(response(result))
-            }catch (err) {
-                res.sendStatus(500)
-            }
-        }
+        GenericRepository.execute(dbContext, req.body, SP.AgruparContenedor, req,res,next)
     }
 
     async function ubicarPrepaquete(req, res, next) {
-        const { codigoUbicacion, codigoEtiqueta } = req.body
-        if (!codigoUbicacion || !codigoEtiqueta) {
-            return res.sendStatus(404);
-        }
-        else {
-            var parameters = []
-            parameters.push({ name: 'CodigoUbicacion', value: codigoUbicacion });
-            parameters.push({ name: 'CodigoPrepaquete', value: codigoEtiqueta });
+        GenericRepository.execute(dbContext, req.body, SP.UbicarPrepaquete, req,res,next)
 
-            try {
-                const result = await dbContext.execSp('SP_UbicarPrepaquete', parameters)
-                return res.json(response(result))
-            }catch (err) {
-                res.sendStatus(500)
-            }
-        }
     }
 
     async function vaciarUbicacion(req,res, next){
-        const { codigoUbicacion } = req.body
-        if (!codigoUbicacion) {
-            return res.sendStatus(404);
-        }
-        else {
-            var parameters = []
-            parameters.push({ name: 'CodigoUbicacion', value: codigoUbicacion });
-
-            try {
-                const result = await dbContext.execSp('SP_VaciarUbicacion', parameters)
-                return res.json(response(result))
-            }catch (err) {
-                res.sendStatus(500)
-            }
-        }
+        GenericRepository.execute(dbContext, req.body, SP.VaciarUbicacion, req,res,next)
     }
 
     async function vaciarAgrupacion(req,res, next){
-        const { codigoAgrupacion } = req.body
-        if (!codigoAgrupacion) {
-            return res.sendStatus(404);
-        }
-        else {
-            var parameters = []
-            parameters.push({ name: 'CodigoAgrupacion', value: codigoAgrupacion });
-
-            try {
-                const result = await dbContext.execSp('SP_VaciarAgrupacion', parameters)
-                return res.json(response(result))
-            }catch (err) {
-                res.sendStatus(500)
-            }
-        }
+        GenericRepository.execute(dbContext, req.body, SP.VaciarAgrupacion, req,res,next)
     }
 
     return {
