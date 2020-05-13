@@ -7,7 +7,7 @@ module.exports = {
     },
     BuscarPorUbicacion: {
         nombre: 'SP_BuscarPaquetesPorUbicacion',
-        inputParams: [{nombre: 'CodigoEtiqueta', match: 'codigoUbicacion'}],
+        inputParams: [{nombre: 'CodigoUbicacion', match: 'codigoUbicacion'}],
         outputParams: [],
         multiFila : true,
     },
