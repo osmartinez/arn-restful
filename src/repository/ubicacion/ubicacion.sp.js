@@ -2,7 +2,7 @@
 module.exports = {
     Buscar: {
         nombre: 'SP_BuscarUbicacionPorCodigo',
-        inputParams: [{ nombre: 'CodigoUbicacion',tipo: sql.NVarChar, match: 'codigoUbicacion' }],
+        inputParams: [{ nombre: 'CodigoUbicacion', match: 'codigoUbicacion' }],
         outputParams: [],
         multiFila: false,
     },
