@@ -1,8 +1,7 @@
-const sql = require('mssql')
 module.exports = {
     ListarTareasProgramadasEnMaquina: {
         nombre: 'SP_ObtenerTareasProgramadasMaquina',
-        inputParams: [{ nombre: 'CodigoMaquina',tipo: sql.NVarChar, match: 'codigoMaquina' }],
+        inputParams: [{ nombre: 'CodigoMaquina', match: 'codigoMaquina' }],
         outputParams: [],
         multiFila: true,
     },
@@ -10,8 +9,8 @@ module.exports = {
     ProgramarTareaMaquina: {
         nombre: 'SP_ProgramarTareaPDA',
         inputParams: [
-            { nombre: 'CodigoMaquina',tipo: sql.NVarChar, match: 'codigoMaquina' },
-            { nombre: 'CodigoEtiqueta',tipo: sql.NVarChar, match: 'codigoEtiqueta' }
+            { nombre: 'CodigoMaquina', match: 'codigoMaquina' },
+            { nombre: 'CodigoEtiqueta', match: 'codigoEtiqueta' }
         ],
         outputParams: [],
         multiFila: false,
@@ -20,8 +19,8 @@ module.exports = {
     ConsumirEtiqueta: {
         nombre: 'SP_ConsumirEtiqueta',
         inputParams: [
-            { nombre: 'CodigoMaquina', tipo: sql.NVarChar,match: 'codigoMaquina' },
-            { nombre: 'CodigoEtiqueta',tipo: sql.NVarChar, match: 'codigoEtiqueta' }
+            { nombre: 'CodigoMaquina', match: 'codigoMaquina' },
+            { nombre: 'CodigoEtiqueta', match: 'codigoEtiqueta' }
         ],
         outputParams: [],
         multiFila: true,
@@ -30,8 +29,8 @@ module.exports = {
     DesconsumirEtiqueta: {
         nombre: 'SP_DesconsumirEtiquetas',
         inputParams: [
-            { nombre: 'IdMaquina',tipo: sql.Int, match: 'idMaquina' },
-            { nombre: 'CodigosEtiquetas',tipo: sql.NVarChar, match: 'codigoEtiqueta' }
+            { nombre: 'IdMaquina', match: 'idMaquina' },
+            { nombre: 'CodigosEtiquetas', match: 'codigoEtiqueta' }
         ],
         outputParams: [],
         multiFila: true,
