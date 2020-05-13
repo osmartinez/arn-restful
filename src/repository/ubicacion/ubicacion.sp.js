@@ -1,15 +1,17 @@
+const sql = require('mssql')
+
 module.exports = {
     Buscar: {
         nombre: 'SP_BuscarUbicacionPorCodigo',
-        inputParams: [{ nombre: 'CodigoUbicacion', match: 'codigoUbicacion' }],
+        inputParams: [{ nombre: 'CodigoUbicacion',tipo: sql.NVarChar, match: 'codigoUbicacion' }],
         outputParams: [],
         multiFila: false,
     },
     UbicarAgrupacion: {
         nombre: 'SP_UbicarAgrupacion',
         inputParams: [
-            { nombre: 'CodigoUbicacion', match: 'codigoUbicacion' },
-            { nombre: 'CodigoAgrupacion', match: 'codigoAgrupacion' }
+            { nombre: 'CodigoUbicacion',tipo: sql.NVarChar, match: 'codigoUbicacion' },
+            { nombre: 'CodigoAgrupacion',tipo: sql.NVarChar, match: 'codigoAgrupacion' }
         ],
         outputParams: [],
         multiFila: true,
@@ -17,8 +19,8 @@ module.exports = {
     UbicarContenedor: {
         nombre: 'SP_UbicarContenedor',
         inputParams: [
-            { nombre: 'CodigoUbicacion', match: 'codigoUbicacion' },
-            { nombre: 'CodigoEtiqueta', match: 'codigoEtiqueta' }
+            { nombre: 'CodigoUbicacion',tipo: sql.NVarChar, match: 'codigoUbicacion' },
+            { nombre: 'CodigoEtiqueta',tipo: sql.NVarChar, match: 'codigoEtiqueta' }
         ],
         outputParams: [],
         multiFila: false,
@@ -27,8 +29,8 @@ module.exports = {
     AgruparContenedor: {
         nombre: 'SP_AgruparContenedor',
         inputParams: [
-            { nombre: 'CodigoAgrupacion', match: 'codigoAgrupacion' },
-            { nombre: 'CodigoEtiqueta', match: 'codigoEtiqueta' }
+            { nombre: 'CodigoAgrupacion',tipo: sql.NVarChar, match: 'codigoAgrupacion' },
+            { nombre: 'CodigoEtiqueta',tipo: sql.NVarChar, match: 'codigoEtiqueta' }
         ],
         outputParams: [],
         multiFila: true,
@@ -38,8 +40,8 @@ module.exports = {
     UbicarPrepaquete: {
         nombre: 'SP_UbicarPrepaquete',
         inputParams: [
-            { nombre: 'CodigoUbicacion', match: 'codigoUbicacion' },
-            { nombre: 'CodigoPrepaquete', match: 'codigoPrepaquete' }
+            { nombre: 'CodigoUbicacion',tipo: sql.NVarChar, match: 'codigoUbicacion' },
+            { nombre: 'CodigoPrepaquete',tipo: sql.NVarChar, match: 'codigoPrepaquete' }
         ],
         outputParams: [],
         multiFila: false,
@@ -48,7 +50,7 @@ module.exports = {
     VaciarUbicacion: {
         nombre: 'SP_VaciarUbicacion',
         inputParams: [
-            { nombre: 'CodigoUbicacion', match: 'codigoUbicacion' },
+            { nombre: 'CodigoUbicacion',tipo: sql.NVarChar, match: 'codigoUbicacion' },
         ],
         outputParams: [],
         multiFila: true,
@@ -57,7 +59,7 @@ module.exports = {
     VaciarAgrupacion: {
         nombre: 'SP_VaciarAgrupacion',
         inputParams: [
-            { nombre: 'CodigoAgrupacion', match: 'codigoAgrupacion' },
+            { nombre: 'CodigoAgrupacion',tipo: sql.NVarChar, match: 'codigoAgrupacion' },
         ],
         outputParams: [],
         multiFila: true,

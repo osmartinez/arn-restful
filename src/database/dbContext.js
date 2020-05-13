@@ -6,7 +6,7 @@ const exec_procedure = async function (proc_name, input_params=[], output_params
         const pool = await poolPromise
         const request = await pool.request()
         for (let param of input_params) {
-            request.input(param.name, param.value)
+            request.input(param.name,param.tipo, param.value)
         }
 
         for (let param of output_params) {
