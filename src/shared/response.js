@@ -1,6 +1,6 @@
 module.exports = function(data,multiple = true){
     if(!multiple){
-        if(data.recordset.length == 0){
+        if(typeof data.recordset === 'undefined' || data.recordset.length == 0){
             return {}
         }
         else{
