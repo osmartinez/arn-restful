@@ -7,6 +7,7 @@ function eRoutes() {
     var ubicacion = require('./repository/ubicacion/ubicacion.routes')(router);
     var paquete = require('./repository/paquete/paquete.routes')(router);
     var utillaje = require('./repository/utillaje/utillaje.routes')(router);
+    var packinglist = require('./repository/packinglist/packinglist.routes')(router);
 
     return router;
 }
