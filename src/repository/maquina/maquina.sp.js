@@ -5,4 +5,11 @@ module.exports = {
         outputParams: [],
         multiFila: false,
     },
+
+    BuscarTodas: {
+        nombre: 'SP_BuscarTodasMaquinas',
+        inputParams: [],
+        outputParams: [],
+        multiFila: true,
+    },
 }

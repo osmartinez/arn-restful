@@ -8,6 +8,8 @@ function eRoutes() {
     var paquete = require('./repository/paquete/paquete.routes')(router);
     var utillaje = require('./repository/utillaje/utillaje.routes')(router);
     var packinglist = require('./repository/packinglist/packinglist.routes')(router);
+    var stock = require('./repository/stock/stock.routes')(router);
+    var operario = require('./repository/operario/operario.routes')(router);
 
     return router;
 }

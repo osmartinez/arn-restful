@@ -7,8 +7,14 @@ function MaquinaRepository(dbContext) {
         GenericRepository.execute(dbContext, req.params, SP.BuscarPorCodigo, req,res,next)
     }
 
+    async function buscarTodas(req, res, next) {
+        GenericRepository.execute(dbContext, req.params, SP.BuscarTodas, req,res,next)
+    }
+
     return {
         buscarPorCodigo,
+        buscarTodas,
+        
     }
 }
 
