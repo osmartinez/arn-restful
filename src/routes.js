@@ -10,7 +10,7 @@ function eRoutes() {
     var packinglist = require('./repository/packinglist/packinglist.routes')(router);
     var stock = require('./repository/stock/stock.routes')(router);
     var operario = require('./repository/operario/operario.routes')(router);
-
+    var ordenFabricacion = require('./repository/ordenFabricacion/ordenFabricacion.routes')(router);
     return router;
 }
 
