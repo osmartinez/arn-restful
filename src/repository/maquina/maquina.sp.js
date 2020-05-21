@@ -12,4 +12,11 @@ module.exports = {
         outputParams: [],
         multiFila: true,
     },
+
+    BuscarTodasEnSeccion: {
+        nombre: 'SP_BuscarTodasMaquinasEnSeccion',
+        inputParams: [{nombre: 'CodSeccion', match: 'codSeccion'}],
+        outputParams: [],
+        multiFila: true,
+    },
 }

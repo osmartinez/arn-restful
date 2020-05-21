@@ -9,4 +9,8 @@ module.exports = function (router) {
 
     router.route('/maquinas')
         .get(maquinaRepository.buscarTodas);
+
+        
+    router.route('/maquinas/enSeccion/:codSeccion')
+    .get(maquinaRepository.buscarTodasEnSeccion);
 }

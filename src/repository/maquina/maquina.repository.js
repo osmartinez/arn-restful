@@ -11,9 +11,14 @@ function MaquinaRepository(dbContext) {
         GenericRepository.execute(dbContext, req.params, SP.BuscarTodas, req,res,next)
     }
 
+    async function buscarTodasEnSeccion(req, res, next) {
+        GenericRepository.execute(dbContext, req.params, SP.BuscarTodasEnSeccion, req,res,next)
+    }
+
     return {
         buscarPorCodigo,
         buscarTodas,
+        buscarTodasEnSeccion,
         
     }
 }
