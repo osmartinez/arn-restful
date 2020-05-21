@@ -11,6 +11,8 @@ function eRoutes() {
     var stock = require('./repository/stock/stock.routes')(router);
     var operario = require('./repository/operario/operario.routes')(router);
     var ordenFabricacion = require('./repository/ordenFabricacion/ordenFabricacion.routes')(router);
+    var seccion = require('./repository/seccion/seccion.routes')(router);
+
     return router;
 }
 
