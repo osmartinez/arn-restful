@@ -10,6 +10,14 @@ module.exports = function (router) {
     router.route('/stocks/buscarPorCodigoUbicacion/:codigoUbicacion')
         .get(stockRepository.buscarPorUbicacion);
 
+        router.route('/stocks/buscarPorPrepaquete/:codigoPrepaquete')
+        .get(stockRepository.buscarPorPrepaquete);
+
+        router.route('/stocks/buscarPorIdOrden/:idOrden')
+        .get(stockRepository.buscarPorIdOrden);
+
     router.route('/stocks/buscarStockTallas/:idStock')
         .get(stockRepository.buscarStockTallasPorStock);
+
+    
 }
