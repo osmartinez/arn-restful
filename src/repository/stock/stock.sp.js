@@ -34,7 +34,7 @@ module.exports = {
         multiFila: true,
     },
     BuscarStockPorIdOrden: {
-        nombre: 'SP_BuscarStockPorIdOrden',
+        nombre: 'SP_BuscarStockPorOrdenFabricacion',
         inputParams: [
             { nombre: 'IdOrden', match: 'idOrden' },
         ],
