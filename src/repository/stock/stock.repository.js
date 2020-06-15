@@ -24,12 +24,37 @@ function StockRepository(dbContext) {
         GenericRepository.execute(dbContext, req.params, SP.BuscarStockTallasPorStock, req,res,next)
     }
 
+    async function buscarStockArticuloEnUbicacion(req, res, next) {
+        GenericRepository.execute(dbContext, req.params, SP.BuscarStockArticuloEnUbicacion, req,res,next)
+    }
+
+    async function borrarStock(req, res, next) {
+        GenericRepository.execute(dbContext, req.params, SP.BorrarStock, req,res,next)
+    }
+
+    async function buscarCodigoArticuloPorOrdenFabricacion(req, res, next) {
+        GenericRepository.execute(dbContext, req.params, SP.BuscarCodigoArticuloPorIdOrden, req,res,next)
+    }
+
+    async function actualizar(req, res, next) {
+        GenericRepository.execute(dbContext, req.body, SP.ActualizarStockArticuloTalla, req,res,next)
+    }
+
+    async function crear(req, res, next) {
+        GenericRepository.execute(dbContext, req.body, SP.CrearStock, req,res,next)
+    }
+
     return {
         buscarPorContenedor,
         buscarPorUbicacion,
         buscarStockTallasPorStock,
         buscarPorPrepaquete,
         buscarPorIdOrden,
+        buscarStockArticuloEnUbicacion,
+        borrarStock,
+        buscarCodigoArticuloPorOrdenFabricacion,
+        actualizar,
+        crear,
 
     }
 }

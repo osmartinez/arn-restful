@@ -5,7 +5,7 @@ function GenericRepository() {
         try {
             const parameters = []
             for (const inputParam of sp.inputParams) {
-                if (!params[inputParam.match]) {
+                if (typeof params[inputParam.match] == 'undefined' || params[inputParam.match] == null) {
                     throw Error(`Parametro ${inputParam.match} no suministrado. En ${sp.nombre}`)
                 }
                 parameters.push({ name: inputParam.nombre, value: params[inputParam.match] })
