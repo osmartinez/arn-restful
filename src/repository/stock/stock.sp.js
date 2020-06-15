@@ -26,7 +26,7 @@ module.exports = {
         multiFila: true,
     },
     BuscarStockPorPrepaquete: {
-        nombre: 'BuscarStockPorPrepaquete',
+        nombre: 'SP_BuscarStockPorPrepaquete',
         inputParams: [
             { nombre: 'CodigoPrepaquete', match: 'codigoPrepaquete' },
         ],
@@ -34,7 +34,7 @@ module.exports = {
         multiFila: true,
     },
     BuscarStockPorIdOrden: {
-        nombre: 'BuscarStockPorIdOrden',
+        nombre: 'SP_BuscarStockPorIdOrden',
         inputParams: [
             { nombre: 'IdOrden', match: 'idOrden' },
         ],
