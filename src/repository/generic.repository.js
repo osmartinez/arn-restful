@@ -14,6 +14,7 @@ function GenericRepository() {
             const result = await dbContext.execSp(sp.nombre, parameters)
             return res.json(response(result, multiple = sp.multiFila))
         } catch (err) {
+            console.error(`Error al ejecutar ${sp}`)
             console.error(err);
             res.sendStatus(500)
         }
