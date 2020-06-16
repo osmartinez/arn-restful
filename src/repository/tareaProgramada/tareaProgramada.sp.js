@@ -24,6 +24,10 @@ module.exports = {
         ],
         outputParams: [],
         multiFila: true,
+        publicarMensaje: true,
+        datosPublicacion: {
+            topic: '/ordenesFabricacion/consumos',
+        }
     },
 
     DesconsumirEtiqueta: {
