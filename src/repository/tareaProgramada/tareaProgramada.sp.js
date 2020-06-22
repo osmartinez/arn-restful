@@ -14,6 +14,7 @@ module.exports = {
         ],
         outputParams: [],
         multiFila: false,
+        publicarMensaje: true,
         datosPublicacion: {
             topic: '/ordenesFabricacion/programacion',
         }
