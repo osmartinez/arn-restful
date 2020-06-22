@@ -13,7 +13,7 @@ module.exports = {
             { nombre: 'CodigoEtiqueta', match: 'codigoEtiqueta' }
         ],
         outputParams: [],
-        multiFila: false,
+        multiFila: true,
         publicarMensaje: true,
         datosPublicacion: {
             topic: '/ordenesFabricacion/programacion',
