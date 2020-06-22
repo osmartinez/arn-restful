@@ -14,5 +14,9 @@ module.exports = {
         ],
         outputParams: [],
         multiFila: false,
+        publicarMensaje: true,
+        datosPublicacion: {
+            topic: '/packinglists/insercionContenedor',
+        }
     }
 }

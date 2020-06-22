@@ -14,6 +14,9 @@ module.exports = {
         ],
         outputParams: [],
         multiFila: false,
+        datosPublicacion: {
+            topic: '/ordenesFabricacion/programacion',
+        }
     },
 
     ConsumirEtiqueta: {
