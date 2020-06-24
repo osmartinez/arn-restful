@@ -1,4 +1,4 @@
-const SP = require('./talleres.sp')
+const SP = require('./taller.sp')
 const GenericRepository = require('../generic.repository')()
 
 function TallerRepository(dbContext) {

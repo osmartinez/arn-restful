@@ -24,6 +24,6 @@ module.exports = {
             { nombre: 'Seccion', match: 'codSeccion' },
         ],
         outputParams: [],
-        multiFila: true,
+        multiFila: false,
     },
 }

@@ -14,7 +14,7 @@ function eRoutes() {
     var ordenFabricacion = require('./repository/ordenFabricacion/ordenFabricacion.routes')(router);
     var seccion = require('./repository/seccion/seccion.routes')(router);
     var prepaquete = require('./repository/prepaquete/prepaquete.routes')(router);
-
+    var talleres = require('./repository/taller/taller.routes')(router);
     return router;
 }
 

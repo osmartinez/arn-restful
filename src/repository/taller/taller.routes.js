@@ -1,4 +1,4 @@
-const TallerRepository = require('./talleres.repository');
+const TallerRepository = require('./taller.repository');
 const dbContext = require('../../database/dbContext');
 
 module.exports = function (router) {
