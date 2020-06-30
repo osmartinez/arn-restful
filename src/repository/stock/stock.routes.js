@@ -28,6 +28,9 @@ module.exports = function (router) {
     router.route('/stocks/buscarCodigoArticuloPorOrden/:idOrden')
         .get(stockRepository.buscarCodigoArticuloPorOrdenFabricacion);
 
+        router.route('/stocks/buscarPorReferencia/:codigoArticulo')
+        .get(stockRepository.buscarStockPorReferencia);
+
     router.route('/stocks/actualizar')
         .post(stockRepository.actualizar);
 

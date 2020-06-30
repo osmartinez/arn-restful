@@ -44,6 +44,10 @@ function StockRepository(dbContext) {
         GenericRepository.execute(dbContext, req.body, SP.CrearStock, req,res,next)
     }
 
+    async function buscarStockPorReferencia(req,res,next){
+        GenericRepository.execute(dbContext,req.params,SP.BuscarStockPorReferencia, req,res,next)
+    }
+
     return {
         buscarPorContenedor,
         buscarPorUbicacion,
@@ -55,6 +59,7 @@ function StockRepository(dbContext) {
         buscarCodigoArticuloPorOrdenFabricacion,
         actualizar,
         crear,
+        buscarStockPorReferencia,
 
     }
 }

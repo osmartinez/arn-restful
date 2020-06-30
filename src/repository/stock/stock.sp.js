@@ -89,6 +89,15 @@ module.exports = {
         ],
         outputParams: [],
         multiFila: true,
+    },
+
+    BuscarStockPorReferencia:{
+        nombre: 'SP_BuscarStockPorReferencia',
+        inputParams: [
+            { nombre: 'CodigoArticulo', match: 'codigoArticulo' },
+        ],
+        outputParams: [],
+        multiFila: true,
     }
 
 }
