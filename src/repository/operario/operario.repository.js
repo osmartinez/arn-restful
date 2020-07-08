@@ -9,9 +9,18 @@ function OperarioRepository(dbContext) {
         GenericRepository.execute(dbContext, req.params, SP.Buscar, req,res,next)
     }
 
+    async function entradaPuesto(req, res, next) {
+        GenericRepository.execute(dbContext, req.body, SP.EntradaPuesto, req,res,next)
+    }
+
+    async function salidaPuesto(req, res, next) {
+        GenericRepository.execute(dbContext, req.body, SP.SalidaPuesto, req,res,next)
+    }
 
     return {
         buscar,
+        entradaPuesto,
+        salidaPuesto,
 
     }
 }

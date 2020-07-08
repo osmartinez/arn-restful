@@ -5,6 +5,7 @@ var client = mqtt.connect('mqtt://localhost:1883');
 function GenericRepository() {
     async function execute(dbContext, params, sp, req, res, next) {
         try {
+            console.log(params)
             const parameters = []
             for (const inputParam of sp.inputParams) {
                 if (typeof params[inputParam.match] == 'undefined' || params[inputParam.match] == null) {
