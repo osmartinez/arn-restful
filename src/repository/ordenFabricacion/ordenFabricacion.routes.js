@@ -9,4 +9,7 @@ module.exports = function (router) {
 
     router.route('/ordenesFabricacion/buscarOperacion/:idOrden/:codSeccion')
         .get(ordenFabricacionRepository.buscarOperacion);
+
+        router.route('/ordenesFabricacion/buscarOperaciones/:idOrden')
+        .get(ordenFabricacionRepository.buscarOperaciones);
 }

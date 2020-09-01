@@ -16,6 +16,16 @@ module.exports = {
         multiFila: true,
     },
 
+    BuscarOperaciones: {
+        nombre: 'SP_BuscarOperacionesPorOrdenFabricacion',
+        inputParams: [
+            { nombre: 'IdOrden', match: 'idOrden' },
+        ],
+        outputParams: [],
+        multiFila: true,
+    },
+
+
     BuscarPorCodigo:{
         nombre: 'SP_BuscarOrdenFabricacionPorCodigo',
         inputParams: [{nombre: 'Codigo', match:'codigo'}],

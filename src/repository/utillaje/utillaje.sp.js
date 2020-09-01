@@ -37,6 +37,8 @@ module.exports = {
             { nombre: 'ImpresionMarcaje1', match: 'impresionMarcaje1' },
             { nombre: 'ImpresionMarcaje2', match: 'impresionMarcaje2' },
             { nombre: 'ImpresionMarcaje3', match: 'impresionMarcaje3' },
+            { nombre: 'FicheroMarcaje', match: 'ficheroMarcaje' },
+
         ],
         outputParams: [],
         multiFila: false,
