@@ -24,7 +24,8 @@ module.exports = {
         nombre: 'SP_ConsumirEtiqueta',
         inputParams: [
             { nombre: 'CodigoMaquina', match: 'codigoMaquina' },
-            { nombre: 'CodigoEtiqueta', match: 'codigoEtiqueta' }
+            { nombre: 'CodigoEtiqueta', match: 'codigoEtiqueta' },
+            { nombre: 'IdOperacionConsumir', match: 'idOperacionConsumir' }
         ],
         outputParams: [],
         multiFila: true,
@@ -34,11 +35,21 @@ module.exports = {
         }
     },
 
-    DesconsumirEtiqueta: {
+    DesconsumirEtiquetas: {
         nombre: 'SP_DesconsumirEtiquetas',
         inputParams: [
             { nombre: 'IdMaquina', match: 'idMaquina' },
             { nombre: 'CodigosEtiquetas', match: 'codigoEtiqueta' }
+        ],
+        outputParams: [],
+        multiFila: true,
+    },
+
+    DesconsumirEtiqueta: {
+        nombre: 'SP_DesconsumirEtiqueta',
+        inputParams: [
+            { nombre: 'CodigoEtiqueta', match: 'CodigoEtiqueta' },
+            { nombre: 'IdOperacion', match: 'IdOperacion' }
         ],
         outputParams: [],
         multiFila: true,

@@ -17,6 +17,10 @@ function TareaProgramadaRepository(dbContext) {
     }
 
     async function desconsumirTareaMaquina(req, res, next) {
+        GenericRepository.execute(dbContext, req.body, SP.DesconsumirEtiquetas, req,res,next)
+    }
+
+    async function desconsumirEtiqueta(req, res, next) {
         GenericRepository.execute(dbContext, req.body, SP.DesconsumirEtiqueta, req,res,next)
     }
 
@@ -25,6 +29,8 @@ function TareaProgramadaRepository(dbContext) {
         programarTareaMaquina,
         consumirTareaMaquina,
         desconsumirTareaMaquina,
+        desconsumirEtiqueta,
+        
     }
 }
 

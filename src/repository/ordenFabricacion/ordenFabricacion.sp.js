@@ -39,6 +39,14 @@ module.exports = {
         inputParams: [{nombre: 'Codigo', match:'codigo'}],
         outputParams:[],
         multiFila: false,
+    },
+
+    BuscarOperacionesPorPrepaqueteMaquina:{
+        nombre: 'SP_BuscarOperacionesPorPrepaqueteMaquina',
+        inputParams: [{nombre: 'CodigoEtiqueta', match:'codigoEtiqueta'},
+        {nombre: 'CodigoMaquina', match:'codigoMaquina'}],
+        outputParams:[],
+        multiFila: true,
     }
 
    

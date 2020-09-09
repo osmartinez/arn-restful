@@ -5,10 +5,12 @@ const config = require('./config')
 const morgan = require('morgan')
 const env = process.env.NODE_ENV || 'production';
 const port = process.env.port || config[env].server.port
+require('console-stamp')(console, 'dd/mm/yyyy HH:MM:ss');
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(morgan('dev'))
+
 const router = require('./routes')();
 app.use('/api', router);
 
