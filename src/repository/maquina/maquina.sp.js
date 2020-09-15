@@ -21,10 +21,21 @@ module.exports = {
     },
 
     AsociarAPuesto: {
-        nombre: 'SP_AsociarMaquinaAPuesto',
+        nombre: 'SP_MaquinaAsociarAPuesto',
         inputParams: [{nombre: 'IdMaquina', match: 'idMaquina'},
         {nombre: 'IdPuesto', match: 'idPuesto'}],
         outputParams: [],
         multiFila: true,
     },
+
+    ActualizarConfiguracionesPines:{
+        nombre: 'SP_MaquinaActualizarConfiguracionPines',
+        inputParams: [
+            {nombre: 'IdMaquina', match: 'idMaquina'},
+            {nombre: 'EsPulsoManual', match: 'esPulsoManual'},
+            {nombre: 'ProductoPorPulso', match: 'productoPorPulso'},
+            {nombre: 'PinPulso', match: 'pinPulso'},],
+        outputParams: [],
+        multiFila: false,
+    }
 }

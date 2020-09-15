@@ -19,11 +19,16 @@ function MaquinaRepository(dbContext) {
         GenericRepository.execute(dbContext, req.body, SP.AsociarAPuesto, req,res,next)
     }
 
+    async function actualizarConfiguracionPines(req, res, next) {
+        GenericRepository.execute(dbContext, req.body, SP.ActualizarConfiguracionesPines, req,res,next)
+    }
+
     return {
         buscarPorCodigo,
         buscarTodas,
         buscarTodasEnSeccion,
         asociarAPuesto,
+        actualizarConfiguracionPines,
     }
 }
 

@@ -5,6 +5,8 @@ module.exports = {
         inputParams: [
             { nombre: 'Descripcion', match: 'descripcion' },
             { nombre: 'Observaciones', match: 'observaciones' },
+            { nombre: 'PinLed', match: 'pinLed' },
+            { nombre: 'PinBuzzer', match: 'pinBuzzer' },
         ],
         outputParams: [],
         multiFila: false,
