@@ -19,4 +19,12 @@ module.exports = {
         outputParams: [],
         multiFila: true,
     },
+
+    AsociarAPuesto: {
+        nombre: 'SP_AsociarMaquinaAPuesto',
+        inputParams: [{nombre: 'IdMaquina', match: 'idMaquina'},
+        {nombre: 'IdPuesto', match: 'idPuesto'}],
+        outputParams: [],
+        multiFila: true,
+    },
 }

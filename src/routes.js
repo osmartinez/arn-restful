@@ -15,6 +15,8 @@ function eRoutes() {
     var seccion = require('./repository/seccion/seccion.routes')(router);
     var prepaquete = require('./repository/prepaquete/prepaquete.routes')(router);
     var talleres = require('./repository/taller/taller.routes')(router);
+    var puestos = require('./repository/puesto/puesto.routes')(router);
+
     return router;
 }
 

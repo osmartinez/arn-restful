@@ -15,11 +15,15 @@ function MaquinaRepository(dbContext) {
         GenericRepository.execute(dbContext, req.params, SP.BuscarTodasEnSeccion, req,res,next)
     }
 
+    async function asociarAPuesto(req, res, next) {
+        GenericRepository.execute(dbContext, req.body, SP.AsociarAPuesto, req,res,next)
+    }
+
     return {
         buscarPorCodigo,
         buscarTodas,
         buscarTodasEnSeccion,
-        
+        asociarAPuesto,
     }
 }
 

@@ -13,4 +13,7 @@ module.exports = function (router) {
         
     router.route('/maquinas/enSeccion/:codSeccion')
     .get(maquinaRepository.buscarTodasEnSeccion);
+
+    router.route('/maquinas/asociarAPuesto')
+    .post(maquinaRepository.asociarAPuesto);
 }
