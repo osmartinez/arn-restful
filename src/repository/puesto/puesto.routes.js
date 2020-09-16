@@ -12,4 +12,8 @@ module.exports = function (router) {
 
     router.route('/puestos/buscarPorDescripcion/:descripcion')
         .get(puestoRepository.buscarPorDescripcion);
+
+        router.route('/puestos/actualizarIncidencia')
+        .post(puestoRepository.actualizarIncidencia);
+
 }

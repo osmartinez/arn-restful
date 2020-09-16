@@ -27,4 +27,20 @@ module.exports = {
         outputParams: [],
         multiFila: true,
     },
+    ActualizarIncidencia:{
+        nombre: 'SP_PuestoActualizarConfiguracionIncidencias',
+        inputParams: [
+            { nombre: 'Id', match: 'id' },
+            { nombre: 'Nombre', match: 'nombre' },
+            { nombre: 'Habilitada', match: 'habilitada' },
+            { nombre: 'PinNotificacion1', match: 'pinNotificacion1' },
+            { nombre: 'PinNotificacion2', match: 'pinNotificacion2' },
+            { nombre: 'AvisarA', match: 'avisarA' },
+            { nombre: 'Corregible', match: 'corregible' },
+            { nombre: 'SegundosEjecucion', match: 'segundosEjecucion' },
+            { nombre: 'IdPuesto', match: 'idPuesto' },
+        ],
+        outputParams: [],
+        multiFila: true,
+    },
 }
