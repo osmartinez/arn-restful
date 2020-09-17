@@ -43,4 +43,48 @@ module.exports = {
         outputParams: [],
         multiFila: true,
     },
+
+    ObtenerTodos:{
+        nombre: 'SP_PuestoObtenerTodos',
+        inputParams: [
+        ],
+        outputParams: [],
+        multiFila: true,
+    },
+
+    ObtenerPorId:{
+        nombre: 'SP_PuestoBuscarPorId',
+        inputParams: [
+            { nombre: 'Id', match: 'id' },
+        ],
+        outputParams: [],
+        multiFila: false,
+    },
+
+    ObtenerConfiguracionesIncidenciasPorId:{
+        nombre: 'SP_PuestoBuscarConfiguracionesIncidenciasPorId',
+        inputParams: [
+            { nombre: 'Id', match: 'id' },
+        ],
+        outputParams: [],
+        multiFila: true,
+    },
+
+    ObtenerConfiguracionesPinsPorId:{
+        nombre: 'SP_PuestoBuscarConfiguracionesPinsPorId',
+        inputParams: [
+            { nombre: 'Id', match: 'id' },
+        ],
+        outputParams: [],
+        multiFila: false,
+    },
+
+    ObtenerMaquinasPorId:{
+        nombre: 'SP_PuestoBuscarMaquinasPorId',
+        inputParams: [
+            { nombre: 'Id', match: 'id' },
+        ],
+        outputParams: [],
+        multiFila: true,
+    },
 }

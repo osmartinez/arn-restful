@@ -20,12 +20,36 @@ function PuestoRepository(dbContext) {
         GenericRepository.execute(dbContext, req.body, SP.ActualizarIncidencia, req,res,next)
     }
 
+    async function obtenerTodos(req, res, next) {
+        GenericRepository.execute(dbContext, req.params, SP.ObtenerTodos, req,res,next)
+    }
+
+    async function obtenerPorId(req, res, next) {
+        GenericRepository.execute(dbContext, req.params, SP.ObtenerPorId, req,res,next)
+    }
+
+    async function obtenerConfiguracionesIncidencias(req, res, next) {
+        GenericRepository.execute(dbContext, req.params, SP.ObtenerConfiguracionesIncidenciasPorId, req,res,next)
+    }
+
+    async function obtenerConfiguracionesPins(req, res, next) {
+        GenericRepository.execute(dbContext, req.params, SP.ObtenerConfiguracionesPinsPorId, req,res,next)
+    }
+
+    async function obtenerMaquinas(req, res, next) {
+        GenericRepository.execute(dbContext, req.params, SP.ObtenerMaquinasPorId, req,res,next)
+    }
+
     return {
         crear,
         buscarPorCodigoEtiqueta,
         buscarPorDescripcion,
         actualizarIncidencia,
-        
+        obtenerTodos,
+        obtenerPorId,
+        obtenerConfiguracionesIncidencias,
+        obtenerConfiguracionesPins,
+        obtenerMaquinas,
     }
 }
 

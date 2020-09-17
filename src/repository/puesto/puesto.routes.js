@@ -13,7 +13,22 @@ module.exports = function (router) {
     router.route('/puestos/buscarPorDescripcion/:descripcion')
         .get(puestoRepository.buscarPorDescripcion);
 
-        router.route('/puestos/actualizarIncidencia')
+    router.route('/puestos/actualizarIncidencia')
         .post(puestoRepository.actualizarIncidencia);
+
+    router.route('/puestos')
+        .get(puestoRepository.obtenerTodos);
+
+    router.route('/puestos/:id')
+        .get(puestoRepository.obtenerPorId);
+
+    router.route('/puestos/obtenerConfiguracionesIncidencias/:id')
+        .get(puestoRepository.obtenerConfiguracionesIncidencias);
+
+    router.route('/puestos/obtenerConfiguracionesPins/:id')
+        .get(puestoRepository.obtenerConfiguracionesPins);
+
+        router.route('/puestos/obtenerMaquinas/:id')
+        .get(puestoRepository.obtenerMaquinas);
 
 }
