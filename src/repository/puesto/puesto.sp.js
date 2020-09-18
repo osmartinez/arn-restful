@@ -99,4 +99,30 @@ module.exports = {
         outputParams: [],
         multiFila: true,
     },
+    EntradaOperarioPorCodigoObrero:{
+        nombre: 'SP_PuestoRegistroEntradaOperarioPorCodigo',
+        inputParams: [
+            { nombre: 'Codigo', match: 'codigoObrero' },
+            {nombre: 'IdPuesto', match: 'idPuesto'}
+        ],
+        outputParams: [],
+        multiFila: true,
+    },
+    SalidaOperarioPorCodigoObrero:{
+        nombre: 'SP_PuestoRegistroSalidaOperarioPorCodigo',
+        inputParams: [
+            { nombre: 'Codigo', match: 'codigoObrero' },
+            {nombre: 'IdPuesto', match: 'idPuesto'}
+        ],
+        outputParams: [],
+        multiFila: true,
+    },
+    BuscarOperariosActuales:{
+        nombre: 'SP_PuestoOperariosActuales',
+        inputParams: [
+            {nombre: 'IdPuesto', match: 'id'}
+        ],
+        outputParams: [],
+        multiFila: true,
+    },
 }

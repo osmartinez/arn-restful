@@ -44,6 +44,19 @@ function PuestoRepository(dbContext) {
         GenericRepository.execute(dbContext, req.params, SP.ObtenerMaquinasPorId, req,res,next)
     }
 
+    async function entradaOperarioPorCodigoObrero(req, res, next) {
+        GenericRepository.execute(dbContext, req.body, SP.EntradaOperarioPorCodigoObrero, req,res,next)
+    }
+
+    async function salidaOperarioPorCodigoObrero(req, res, next) {
+        GenericRepository.execute(dbContext, req.body, SP.SalidaOperarioPorCodigoObrero, req,res,next)
+    }
+
+    async function buscarOperariosActuales(req, res, next) {
+        GenericRepository.execute(dbContext, req.params, SP.BuscarOperariosActuales, req,res,next)
+    }
+
+
     return {
         crear,
         actualizar,
@@ -55,6 +68,9 @@ function PuestoRepository(dbContext) {
         obtenerConfiguracionesIncidencias,
         obtenerConfiguracionesPins,
         obtenerMaquinas,
+        entradaOperarioPorCodigoObrero,
+        salidaOperarioPorCodigoObrero,
+        buscarOperariosActuales,
     }
 }
 

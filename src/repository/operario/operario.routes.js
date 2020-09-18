@@ -7,9 +7,4 @@ module.exports = function (router) {
     router.route('/operarios/:idOperario')
         .get(operarioRepository.buscar);
 
-        router.route('/operarios/entrada')
-        .post(operarioRepository.entradaPuesto);
-
-        router.route('/operarios/salida')
-        .post(operarioRepository.salidaPuesto);
 }

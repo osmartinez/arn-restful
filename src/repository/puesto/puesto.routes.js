@@ -35,4 +35,13 @@ module.exports = function (router) {
     router.route('/puestos/obtenerMaquinas/:id')
         .get(puestoRepository.obtenerMaquinas);
 
+        router.route('/puestos/entradaOperarioPorCodigoObrero')
+        .post(puestoRepository.entradaOperarioPorCodigoObrero);
+
+        router.route('/puestos/salidaOperarioPorCodigoObrero')
+        .post(puestoRepository.salidaOperarioPorCodigoObrero);
+
+        router.route('/puestos/buscarOperariosActuales/:id')
+        .get(puestoRepository.buscarOperariosActuales);
+
 }
