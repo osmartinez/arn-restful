@@ -11,6 +11,18 @@ module.exports = {
         outputParams: [],
         multiFila: false,
     },
+    Actualizar:{
+        nombre: 'SP_PuestoActualizar',
+        inputParams: [
+            { nombre: 'Id', match: 'id' },
+            { nombre: 'Descripcion', match: 'descripcion' },
+            { nombre: 'Observaciones', match: 'observaciones' },
+            { nombre: 'PinLed', match: 'pinLed' },
+            { nombre: 'PinBuzzer', match: 'pinBuzzer' },
+        ],
+        outputParams: [],
+        multiFila: false,
+    },
     BuscarPorDescripcion:{
         nombre: 'SP_PuestoBuscarPorDescripcion',
         inputParams: [

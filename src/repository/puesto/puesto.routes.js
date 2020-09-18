@@ -7,6 +7,10 @@ module.exports = function (router) {
     router.route('/puestos/crear')
         .post(puestoRepository.crear);
 
+    router.route('/puestos/actualizar')
+        .post(puestoRepository.actualizar);
+
+
     router.route('/puestos/buscarPorCodigoEtiqueta/:codigoEtiqueta')
         .get(puestoRepository.buscarPorCodigoEtiqueta);
 
@@ -28,7 +32,7 @@ module.exports = function (router) {
     router.route('/puestos/obtenerConfiguracionesPins/:id')
         .get(puestoRepository.obtenerConfiguracionesPins);
 
-        router.route('/puestos/obtenerMaquinas/:id')
+    router.route('/puestos/obtenerMaquinas/:id')
         .get(puestoRepository.obtenerMaquinas);
 
 }

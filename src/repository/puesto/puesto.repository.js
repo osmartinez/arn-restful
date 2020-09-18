@@ -8,6 +8,10 @@ function PuestoRepository(dbContext) {
         GenericRepository.execute(dbContext, req.body, SP.Crear, req,res,next)
     }
 
+    async function actualizar(req, res, next) {
+        GenericRepository.execute(dbContext, req.body, SP.Actualizar, req,res,next)
+    }
+
     async function buscarPorCodigoEtiqueta(req, res, next) {
         GenericRepository.execute(dbContext, req.params, SP.BuscarPorCodigoEtiqueta, req,res,next)
     }
@@ -42,6 +46,7 @@ function PuestoRepository(dbContext) {
 
     return {
         crear,
+        actualizar,
         buscarPorCodigoEtiqueta,
         buscarPorDescripcion,
         actualizarIncidencia,
