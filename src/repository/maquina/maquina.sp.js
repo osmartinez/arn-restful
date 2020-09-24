@@ -28,13 +28,24 @@ module.exports = {
         multiFila: true,
     },
 
+    DesasociarPuesto: {
+        nombre: 'SP_MaquinaDesasociarPuesto',
+        inputParams: [
+        {nombre: 'IdPuesto', match: 'idPuesto'}],
+        outputParams: [],
+        multiFila: true,
+    },
+
+
     ActualizarConfiguracionesPines:{
         nombre: 'SP_MaquinaActualizarConfiguracionPines',
         inputParams: [
             {nombre: 'IdMaquina', match: 'idMaquina'},
             {nombre: 'EsPulsoManual', match: 'esPulsoManual'},
             {nombre: 'ProductoPorPulso', match: 'productoPorPulso'},
-            {nombre: 'PinPulso', match: 'pinPulso'},],
+            {nombre: 'PinPulso', match: 'pinPulso'},
+            {nombre: 'DescontarAuto', match: 'descontarAuto'},
+        ],
         outputParams: [],
         multiFila: false,
     }

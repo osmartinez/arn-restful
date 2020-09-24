@@ -17,6 +17,8 @@ module.exports = function (router) {
     router.route('/maquinas/asociarAPuesto')
         .post(maquinaRepository.asociarAPuesto);
 
+        router.route('/maquinas/desasociarPuesto')
+        .post(maquinaRepository.desasociarPuesto);
 
     router.route('/maquinas/actualizarConfiguracionPines')
         .post(maquinaRepository.actualizarConfiguracionPines);

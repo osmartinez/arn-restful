@@ -19,6 +19,10 @@ function MaquinaRepository(dbContext) {
         GenericRepository.execute(dbContext, req.body, SP.AsociarAPuesto, req,res,next)
     }
 
+    async function desasociarPuesto(req, res, next) {
+        GenericRepository.execute(dbContext, req.body, SP.DesasociarPuesto, req,res,next)
+    }
+
     async function actualizarConfiguracionPines(req, res, next) {
         GenericRepository.execute(dbContext, req.body, SP.ActualizarConfiguracionesPines, req,res,next)
     }
@@ -29,6 +33,7 @@ function MaquinaRepository(dbContext) {
         buscarTodasEnSeccion,
         asociarAPuesto,
         actualizarConfiguracionPines,
+        desasociarPuesto,
     }
 }
 
