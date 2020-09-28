@@ -7,4 +7,7 @@ module.exports = function (router) {
     router.route('/operarios/:idOperario')
         .get(operarioRepository.buscar);
 
+        router.route('/operarios/buscarPorCodigo/:codigoOperario')
+        .get(operarioRepository.buscarPorCodigo);
+
 }

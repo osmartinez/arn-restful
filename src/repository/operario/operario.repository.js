@@ -9,8 +9,13 @@ function OperarioRepository(dbContext) {
         GenericRepository.execute(dbContext, req.params, SP.Buscar, req,res,next)
     }
 
+    async function buscarPorCodigo(req, res, next) {
+        GenericRepository.execute(dbContext, req.params, SP.BuscarPorCodigo, req,res,next)
+    }
+
     return {
         buscar,
+        buscarPorCodigo
     }
 }
 
