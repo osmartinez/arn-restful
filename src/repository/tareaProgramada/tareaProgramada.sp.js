@@ -54,4 +54,14 @@ module.exports = {
         outputParams: [],
         multiFila: true,
     },
+    ConsumirEnPuesto: {
+        nombre: 'SP_ConsumirEnPuesto',
+        inputParams: [
+            { nombre: 'IdTarea', match: 'idTarea' },
+            { nombre: 'Cantidad', match: 'cantidad' },
+            { nombre: 'IdMaquina', match: 'idMaquina' }
+        ],
+        outputParams: [],
+        multiFila: false,
+    },
 }

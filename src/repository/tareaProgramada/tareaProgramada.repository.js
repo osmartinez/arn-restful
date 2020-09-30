@@ -24,13 +24,17 @@ function TareaProgramadaRepository(dbContext) {
         GenericRepository.execute(dbContext, req.body, SP.DesconsumirEtiqueta, req,res,next)
     }
 
+    async function consumirEnPuesto(req, res, next) {
+        GenericRepository.execute(dbContext, req.body, SP.ConsumirEnPuesto, req,res,next)
+    }
+
     return {
         getTareasProgramadasEnMaquina,
         programarTareaMaquina,
         consumirTareaMaquina,
         desconsumirTareaMaquina,
         desconsumirEtiqueta,
-        
+        consumirEnPuesto,
     }
 }
 
