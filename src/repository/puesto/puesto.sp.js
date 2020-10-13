@@ -9,6 +9,7 @@ module.exports = {
             { nombre: 'PinBuzzer', match: 'pinBuzzer' },
             { nombre: 'ContadorPaquetes', match: 'contadorPaquetes' },
             { nombre: 'EsContadorPaquetesAutomatico', match: 'esContadorPaquetesAutomatico' },
+            {nombre: 'EsManual',match:'esManual'},
         ],
         outputParams: [],
         multiFila: false,
@@ -23,6 +24,8 @@ module.exports = {
             { nombre: 'PinBuzzer', match: 'pinBuzzer' },
             { nombre: 'ContadorPaquetes', match: 'contadorPaquetes' },
             { nombre: 'EsContadorPaquetesAutomatico', match: 'esContadorPaquetesAutomatico' },
+            {nombre: 'EsManual',match:'esManual'},
+
         ],
         outputParams: [],
         multiFila: false,

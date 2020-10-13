@@ -45,6 +45,7 @@ module.exports = {
             {nombre: 'ProductoPorPulso', match: 'productoPorPulso'},
             {nombre: 'PinPulso', match: 'pinPulso'},
             {nombre: 'DescontarAuto', match: 'descontarAuto'},
+            {nombre: 'PinPulso2', match: 'pinPulso2'},
         ],
         outputParams: [],
         multiFila: false,
