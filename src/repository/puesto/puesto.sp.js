@@ -9,12 +9,12 @@ module.exports = {
             { nombre: 'PinBuzzer', match: 'pinBuzzer' },
             { nombre: 'ContadorPaquetes', match: 'contadorPaquetes' },
             { nombre: 'EsContadorPaquetesAutomatico', match: 'esContadorPaquetesAutomatico' },
-            {nombre: 'EsManual',match:'esManual'},
+            { nombre: 'EsManual', match: 'esManual' },
         ],
         outputParams: [],
         multiFila: false,
     },
-    Actualizar:{
+    Actualizar: {
         nombre: 'SP_PuestoActualizar',
         inputParams: [
             { nombre: 'Id', match: 'id' },
@@ -24,13 +24,13 @@ module.exports = {
             { nombre: 'PinBuzzer', match: 'pinBuzzer' },
             { nombre: 'ContadorPaquetes', match: 'contadorPaquetes' },
             { nombre: 'EsContadorPaquetesAutomatico', match: 'esContadorPaquetesAutomatico' },
-            {nombre: 'EsManual',match:'esManual'},
+            { nombre: 'EsManual', match: 'esManual' },
 
         ],
         outputParams: [],
         multiFila: false,
     },
-    BuscarPorDescripcion:{
+    BuscarPorDescripcion: {
         nombre: 'SP_PuestoBuscarPorDescripcion',
         inputParams: [
             { nombre: 'Descripcion', match: 'descripcion' },
@@ -38,7 +38,7 @@ module.exports = {
         outputParams: [],
         multiFila: true,
     },
-    BuscarPorCodigoEtiqueta:{
+    BuscarPorCodigoEtiqueta: {
         nombre: 'SP_PuestoBuscarPorCodigoEtiqueta',
         inputParams: [
             { nombre: 'CodigoEtiqueta', match: 'codigoEtiqueta' },
@@ -46,7 +46,7 @@ module.exports = {
         outputParams: [],
         multiFila: true,
     },
-    ActualizarIncidencia:{
+    ActualizarIncidencia: {
         nombre: 'SP_PuestoActualizarConfiguracionIncidencias',
         inputParams: [
             { nombre: 'Id', match: 'id' },
@@ -58,12 +58,13 @@ module.exports = {
             { nombre: 'Corregible', match: 'corregible' },
             { nombre: 'SegundosEjecucion', match: 'segundosEjecucion' },
             { nombre: 'IdPuesto', match: 'idPuesto' },
+            { nombre: 'Bloqueante', match: 'bloqueante' },
         ],
         outputParams: [],
         multiFila: true,
     },
 
-    ObtenerTodos:{
+    ObtenerTodos: {
         nombre: 'SP_PuestoObtenerTodos',
         inputParams: [
         ],
@@ -71,7 +72,7 @@ module.exports = {
         multiFila: true,
     },
 
-    ObtenerPorId:{
+    ObtenerPorId: {
         nombre: 'SP_PuestoBuscarPorId',
         inputParams: [
             { nombre: 'Id', match: 'id' },
@@ -80,7 +81,7 @@ module.exports = {
         multiFila: false,
     },
 
-    ObtenerConfiguracionesIncidenciasPorId:{
+    ObtenerConfiguracionesIncidenciasPorId: {
         nombre: 'SP_PuestoBuscarConfiguracionesIncidenciasPorId',
         inputParams: [
             { nombre: 'Id', match: 'id' },
@@ -89,7 +90,7 @@ module.exports = {
         multiFila: true,
     },
 
-    ObtenerConfiguracionesPinsPorId:{
+    ObtenerConfiguracionesPinsPorId: {
         nombre: 'SP_PuestoBuscarConfiguracionesPinsPorId',
         inputParams: [
             { nombre: 'Id', match: 'id' },
@@ -98,7 +99,7 @@ module.exports = {
         multiFila: false,
     },
 
-    ObtenerMaquinasPorId:{
+    ObtenerMaquinasPorId: {
         nombre: 'SP_PuestoBuscarMaquinasPorId',
         inputParams: [
             { nombre: 'Id', match: 'id' },
@@ -106,28 +107,28 @@ module.exports = {
         outputParams: [],
         multiFila: true,
     },
-    EntradaOperarioPorCodigoObrero:{
+    EntradaOperarioPorCodigoObrero: {
         nombre: 'SP_PuestoRegistroEntradaOperarioPorCodigo',
         inputParams: [
             { nombre: 'Codigo', match: 'codigoObrero' },
-            {nombre: 'IdPuesto', match: 'idPuesto'}
+            { nombre: 'IdPuesto', match: 'idPuesto' }
         ],
         outputParams: [],
         multiFila: true,
     },
-    SalidaOperarioPorCodigoObrero:{
+    SalidaOperarioPorCodigoObrero: {
         nombre: 'SP_PuestoRegistroSalidaOperarioPorCodigo',
         inputParams: [
             { nombre: 'Codigo', match: 'codigoObrero' },
-            {nombre: 'IdPuesto', match: 'idPuesto'}
+            { nombre: 'IdPuesto', match: 'idPuesto' }
         ],
         outputParams: [],
         multiFila: true,
     },
-    BuscarOperariosActuales:{
+    BuscarOperariosActuales: {
         nombre: 'SP_PuestoOperariosActuales',
         inputParams: [
-            {nombre: 'IdPuesto', match: 'id'}
+            { nombre: 'IdPuesto', match: 'id' }
         ],
         outputParams: [],
         multiFila: true,
