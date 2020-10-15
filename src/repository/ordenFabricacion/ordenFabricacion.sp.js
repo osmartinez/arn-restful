@@ -47,6 +47,14 @@ module.exports = {
         {nombre: 'CodigoMaquina', match:'codigoMaquina'}],
         outputParams:[],
         multiFila: true,
+    },
+
+    BuscarOperacionesEnSeccion:{
+        nombre: 'SP_OrdenFabricacionObtenerOperacionesEnSeccion',
+        inputParams: [{nombre: 'Id', match:'id'},
+        {nombre: 'CodSeccion', match:'codSeccion'}],
+        outputParams:[],
+        multiFila: true,
     }
 
    

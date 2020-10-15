@@ -24,6 +24,10 @@ function OrdenFabricacionRepository(dbContext) {
         GenericRepository.execute(dbContext, req.params, SP.BuscarOperacionesPorPrepaqueteMaquina, req,res,next)
     }
 
+    async function buscarOperacionesEnSeccion(req, res, next) {
+        GenericRepository.execute(dbContext, req.params, SP.BuscarOperacionesEnSeccion, req,res,next)
+    }
+
 
     return {
         buscar,
@@ -31,6 +35,7 @@ function OrdenFabricacionRepository(dbContext) {
         buscarOperaciones,
         buscarOperacionesTallas,
         buscarOperacionesPorPrepaqueteMaquina,
+        buscarOperacionesEnSeccion,
     }
 }
 

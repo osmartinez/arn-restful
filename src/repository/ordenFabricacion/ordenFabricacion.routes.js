@@ -18,4 +18,7 @@ module.exports = function (router) {
 
         router.route('/ordenesFabricacion/buscarOperaciones/:codigoEtiqueta/:codigoMaquina')
         .get(ordenFabricacionRepository.buscarOperacionesPorPrepaqueteMaquina);
+
+        router.route('/ordenesFabricacion/buscarOperacionesEnSeccion/:id/:codSeccion')
+        .get(ordenFabricacionRepository.buscarOperacionesEnSeccion);
 }
