@@ -28,6 +28,10 @@ function OrdenFabricacionRepository(dbContext) {
         GenericRepository.execute(dbContext, req.params, SP.BuscarOperacionesEnSeccion, req,res,next)
     }
 
+    async function buscarTallasArticulo(req, res, next) {
+        GenericRepository.execute(dbContext, req.params, SP.BuscarTallasArticulo, req,res,next)
+    }
+
 
     return {
         buscar,
@@ -36,6 +40,8 @@ function OrdenFabricacionRepository(dbContext) {
         buscarOperacionesTallas,
         buscarOperacionesPorPrepaqueteMaquina,
         buscarOperacionesEnSeccion,
+        buscarTallasArticulo,
+        
     }
 }
 

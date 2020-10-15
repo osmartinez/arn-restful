@@ -55,6 +55,13 @@ module.exports = {
         {nombre: 'CodSeccion', match:'codSeccion'}],
         outputParams:[],
         multiFila: true,
+    },
+
+    BuscarTallasArticulo:{
+        nombre: 'SP_OrdenFabricacionObtenerTallasArticulo',
+        inputParams: [{nombre: 'Id', match:'id'}],
+        outputParams:[],
+        multiFila: true,
     }
 
    

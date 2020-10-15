@@ -21,4 +21,7 @@ module.exports = function (router) {
 
         router.route('/ordenesFabricacion/buscarOperacionesEnSeccion/:id/:codSeccion')
         .get(ordenFabricacionRepository.buscarOperacionesEnSeccion);
+
+        router.route('/ordenesFabricacion/buscarTallasArticulo/:id')
+        .get(ordenFabricacionRepository.buscarTallasArticulo);
 }
