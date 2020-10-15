@@ -32,6 +32,10 @@ function OrdenFabricacionRepository(dbContext) {
         GenericRepository.execute(dbContext, req.params, SP.BuscarTallasArticulo, req,res,next)
     }
 
+    async function obtenerInformacionTareaPorOperacionYTalla(req,res,next){
+        GenericRepository.execute(dbContext, req.params, SP.ObtenerInformacionTareaPorOperacionYTalla, req,res,next)
+    }
+
 
     return {
         buscar,
@@ -41,7 +45,8 @@ function OrdenFabricacionRepository(dbContext) {
         buscarOperacionesPorPrepaqueteMaquina,
         buscarOperacionesEnSeccion,
         buscarTallasArticulo,
-        
+        obtenerInformacionTareaPorOperacionYTalla,
+
     }
 }
 

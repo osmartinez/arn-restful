@@ -34,35 +34,44 @@ module.exports = {
         multiFila: true,
     },
 
-    BuscarPorCodigo:{
+    BuscarPorCodigo: {
         nombre: 'SP_BuscarOrdenFabricacionPorCodigo',
-        inputParams: [{nombre: 'Codigo', match:'codigo'}],
-        outputParams:[],
+        inputParams: [{ nombre: 'Codigo', match: 'codigo' }],
+        outputParams: [],
         multiFila: false,
     },
 
-    BuscarOperacionesPorPrepaqueteMaquina:{
+    BuscarOperacionesPorPrepaqueteMaquina: {
         nombre: 'SP_BuscarOperacionesPorPrepaqueteMaquina',
-        inputParams: [{nombre: 'CodigoEtiqueta', match:'codigoEtiqueta'},
-        {nombre: 'CodigoMaquina', match:'codigoMaquina'}],
-        outputParams:[],
+        inputParams: [{ nombre: 'CodigoEtiqueta', match: 'codigoEtiqueta' },
+        { nombre: 'CodigoMaquina', match: 'codigoMaquina' }],
+        outputParams: [],
         multiFila: true,
     },
 
-    BuscarOperacionesEnSeccion:{
+    BuscarOperacionesEnSeccion: {
         nombre: 'SP_OrdenFabricacionObtenerOperacionesEnSeccion',
-        inputParams: [{nombre: 'Id', match:'id'},
-        {nombre: 'CodSeccion', match:'codSeccion'}],
-        outputParams:[],
+        inputParams: [{ nombre: 'Id', match: 'id' },
+        { nombre: 'CodSeccion', match: 'codSeccion' }],
+        outputParams: [],
         multiFila: true,
     },
 
-    BuscarTallasArticulo:{
+    BuscarTallasArticulo: {
         nombre: 'SP_OrdenFabricacionObtenerTallasArticulo',
-        inputParams: [{nombre: 'Id', match:'id'}],
-        outputParams:[],
+        inputParams: [{ nombre: 'Id', match: 'id' }],
+        outputParams: [],
+        multiFila: true,
+    },
+
+    ObtenerInformacionTareaPorOperacionYTalla: {
+        nombre: 'SP_OrdenFabricacionObtenerInformacionTareaPorOperacionYTalla',
+        inputParams: [
+            { nombre: 'IdOperacion', match: 'idOperacion' },
+            { nombre: 'Talla', match: 'talla' },],
+        outputParams: [],
         multiFila: true,
     }
 
-   
+
 }
