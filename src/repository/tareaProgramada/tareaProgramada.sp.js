@@ -25,7 +25,8 @@ module.exports = {
         inputParams: [
             { nombre: 'CodigoMaquina', match: 'codigoMaquina' },
             { nombre: 'CodigoEtiqueta', match: 'codigoEtiqueta' },
-            { nombre: 'IdOperacionConsumir', match: 'idOperacionConsumir' }
+            { nombre: 'IdOperacionConsumir', match: 'idOperacionConsumir' },
+            { nombre: 'IdOperario', match: 'idOperario'}
         ],
         outputParams: [],
         multiFila: true,
