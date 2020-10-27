@@ -46,6 +46,10 @@ module.exports = {
             {nombre: 'PinPulso', match: 'pinPulso'},
             {nombre: 'DescontarAuto', match: 'descontarAuto'},
             {nombre: 'PinPulso2', match: 'pinPulso2'},
+            {nombre: 'ValorPulsoDependiente', match: 'valorPulsoDependiente'},
+            {nombre: 'ValorBouncingPulso', match: 'valorBouncingPulso'},
+            {nombre: 'DisparoPulso', match: 'disparoPulso'},
+
         ],
         outputParams: [],
         multiFila: false,
