@@ -6,7 +6,7 @@ const GenericRepository = require('../generic.repository')()
 function OperarioRepository(dbContext) {
 
     async function buscar(req, res, next) {
-        GenericRepository.execute(dbContext, req.params, SP.Buscar, req,res,next)
+        GenericRepository.execute(dbContext, req.params, SP.BuscarPorId, req,res,next)
     }
 
     async function buscarPorCodigo(req, res, next) {

@@ -3,6 +3,7 @@ const express = require('express');
 function eRoutes() {
     const router = express.Router();
     
+    // sql
     var tareaProgramada = require('./repository/tareaProgramada/tareaProgramada.routes')(router);
     var maquina = require('./repository/maquina/maquina.routes')(router);
     var ubicacion = require('./repository/ubicacion/ubicacion.routes')(router);
@@ -16,6 +17,10 @@ function eRoutes() {
     var prepaquete = require('./repository/prepaquete/prepaquete.routes')(router);
     var talleres = require('./repository/taller/taller.routes')(router);
     var puestos = require('./repository/puesto/puesto.routes')(router);
+
+
+    // nosql
+    require('./repository/movimientoOperario/movimientoOperario.routes')(router);
 
     return router;
 }
