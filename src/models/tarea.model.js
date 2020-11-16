@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 const MovimientoPulso = require('./movimientoPulso.model').schema
 const Paquete = require('./paquete.model').schema
-const DetalleTarea = require('./detalleTarea.model').schema
+const Maquina = require('./maquina.model').schema
 
 const tareaSchema = new mongoose.Schema({
     idPuestoSql:{type: Number, required:true},
@@ -12,8 +12,8 @@ const tareaSchema = new mongoose.Schema({
     etiquetaFichada: {type:String},
     utillaje: {type: String},
     tallaUtillaje: {type: String},
-    detallesTarea: {type: [DetalleTarea]},
-    
+    maquinas: {type: [Maquina]},
+
     // generados por mi app
     cantidadFabricadaPuesto: {type: [MovimientoPulso]},
     cantidadDefectuosaPuesto: {type: [MovimientoPulso]},

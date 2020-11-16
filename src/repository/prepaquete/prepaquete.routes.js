@@ -4,7 +4,7 @@ const dbContext = require('../../database/dbContext');
 module.exports = function (router) {
     const prepaqueteRepository = PrepaqueteRepository(dbContext);
 
-    router.route('/prepaquetes/:codigoEtiqueta/:codigoSeccion')
+    router.route('/prepaquetes/buscarEnSeccion')
         .get(prepaqueteRepository.buscarEnSeccion);
 
         router.route('/prepaquetes/:codigoEtiqueta')

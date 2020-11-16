@@ -4,7 +4,7 @@ const GenericRepository = require('../generic.repository')()
 function PrepaqueteRepository(dbContext) {
 
     async function buscarEnSeccion(req, res, next) {
-        GenericRepository.execute(dbContext, req.params, SP.BuscarEnSeccion, req,res,next)
+        GenericRepository.execute(dbContext, req.query, SP.BuscarEnSeccion, req,res,next)
     }
 
     async function buscarPorCodigo(req, res, next) {
