@@ -10,7 +10,7 @@ const detalleTareaSchema = new mongoose.Schema({
     modelo: {type:String},
     referencia:{type: String},
     codigoOrden: {type:String},
-    pedidoLinae: {type: String},
+    pedidoLinea: {type: String},
     descripcionOperacion:{ type:String}
 })
 

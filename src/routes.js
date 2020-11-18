@@ -21,6 +21,7 @@ function eRoutes() {
 
     // nosql
     require('./repository/movimientoOperario/movimientoOperario.routes')(router);
+    require('./repository/tareaNoSQL/tareaNoSQL.routes')(router);
 
     return router;
 }
