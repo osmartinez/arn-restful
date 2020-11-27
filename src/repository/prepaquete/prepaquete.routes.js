@@ -7,9 +7,9 @@ module.exports = function (router) {
     router.route('/prepaquetes/buscarEnSeccion')
         .get(prepaqueteRepository.buscarEnSeccion);
 
-        router.route('/prepaquetes/:codigoEtiqueta')
+    router.route('/prepaquetes/:codigoEtiqueta')
         .get(prepaqueteRepository.buscarPorCodigo);
-        
-        router.route('/prepaquetes/actualizarCantidad')
+
+    router.route('/prepaquetes/actualizarCantidad')
         .post(prepaqueteRepository.actualizarCantidad);
 }

@@ -14,10 +14,6 @@ module.exports = {
         ],
         outputParams: [],
         multiFila: true,
-        publicarMensaje: true,
-        datosPublicacion: {
-            topic: '/ordenesFabricacion/programacion',
-        }
     },
 
     ConsumirEtiqueta: {
@@ -30,10 +26,6 @@ module.exports = {
         ],
         outputParams: [],
         multiFila: true,
-        publicarMensaje: true,
-        datosPublicacion: {
-            topic: '/ordenesFabricacion/consumos',
-        }
     },
 
     DesconsumirEtiquetas: {
