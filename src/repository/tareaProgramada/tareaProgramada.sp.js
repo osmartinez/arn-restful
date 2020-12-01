@@ -22,11 +22,26 @@ module.exports = {
             { nombre: 'CodigoMaquina', match: 'codigoMaquina' },
             { nombre: 'CodigoEtiqueta', match: 'codigoEtiqueta' },
             { nombre: 'IdOperacionConsumir', match: 'idOperacionConsumir' },
-            { nombre: 'IdOperario', match: 'idOperario'}
+            { nombre: 'IdOperario', match: 'idOperario' }
         ],
         outputParams: [],
         multiFila: true,
     },
+
+    ConsumirPLC: {
+        nombre: 'SP_ConsumirPLC',
+        inputParams: [
+            { nombre: 'CodigoEtiqueta', match: 'codigoEtiqueta' },
+            { nombre: 'IdTarea', match: 'idTarea' },
+            { nombre: 'Pares', match: 'pares' },
+            { nombre: 'IpAutomata', match: 'ipAutomata' },
+            { nombre: 'Posicion', match: 'posicion' },
+            { nombre: 'IdOperacionConsumir', match: 'idOperacionConsumir' },
+        ],
+        outputParams: [],
+        multiFila: true,
+    },
+
 
     DesconsumirEtiquetas: {
         nombre: 'SP_DesconsumirEtiquetas',

@@ -12,13 +12,17 @@ module.exports = function (router) {
     router.route('/tareasProgramadas/consumirEnMaquina')
         .post(tareaProgramadaRepository.consumirTareaMaquina)
 
+    router.route('/tareasProgramadas/consumirEnPLC')
+        .post(tareaProgramadaRepository.consumirTareaPLC)
+
+
     router.route('/tareasProgramadas/desconsumirEnMaquina')
         .post(tareaProgramadaRepository.desconsumirTareaMaquina)
 
     router.route('/tareasProgramadas/desconsumirEtiqueta')
         .post(tareaProgramadaRepository.desconsumirEtiqueta)
 
-        router.route('/tareasProgramadas/consumirEnPuesto')
+    router.route('/tareasProgramadas/consumirEnPuesto')
         .post(tareaProgramadaRepository.consumirEnPuesto)
 
 }
