@@ -36,4 +36,7 @@ module.exports = function (router) {
 
     router.route('/stocks/crear')
         .post(stockRepository.crear);
+
+        router.route('/stocks/verificar')
+        .post(stockRepository.verificar);
 }

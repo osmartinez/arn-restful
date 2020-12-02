@@ -98,6 +98,15 @@ module.exports = {
         ],
         outputParams: [],
         multiFila: true,
+    },
+
+    VerificarStock:{
+        nombre: 'SP_StockArticuloVerificar',
+        inputParams: [
+            { nombre: 'Id', match: 'id' },
+        ],
+        outputParams: [],
+        multiFila: false,
     }
 
 }
