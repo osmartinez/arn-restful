@@ -37,8 +37,8 @@ module.exports = {
             { nombre: 'IpAutomata', match: 'ipAutomata' },
             { nombre: 'Posicion', match: 'posicion' },
             { nombre: 'IdOperacionConsumir', match: 'idOperacionConsumir' },
-            { nombre: 'CodigoOrden', match: 'codigoOrden' },
-            { nombre: 'IdOrden', match: 'idOrden' },
+            { nombre: 'CodigoOrdenConsumir', match: 'codigoOrden' },
+            { nombre: 'IdOrdenConsumir', match: 'idOrden' },
 
         ],
         outputParams: [],
