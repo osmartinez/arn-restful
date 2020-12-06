@@ -39,6 +39,9 @@ module.exports = {
             { nombre: 'IdOperacionConsumir', match: 'idOperacionConsumir' },
             { nombre: 'CodigoOrdenConsumir', match: 'codigoOrden' },
             { nombre: 'IdOrdenConsumir', match: 'idOrden' },
+            { nombre: 'TallaConsumir', match: 'tallaConsumir' },
+            { nombre: 'TallaUtillajeConsumir', match: 'tallaUtillajeConsumir' },
+
 
         ],
         outputParams: [],
