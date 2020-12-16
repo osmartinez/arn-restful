@@ -16,15 +16,15 @@ module.exports = function (router) {
     router.route('/ordenesFabricacion/buscarOperacionesTallas/:idOperacion')
         .get(ordenFabricacionRepository.buscarOperacionesTallas);
 
-        router.route('/ordenesFabricacion/buscarOperaciones/:codigoEtiqueta/:codigoMaquina')
+    router.route('/ordenesFabricacion/buscarOperaciones/:codigoEtiqueta/:codigoMaquina')
         .get(ordenFabricacionRepository.buscarOperacionesPorPrepaqueteMaquina);
 
-        router.route('/ordenesFabricacion/buscarOperacionesEnSeccion/:id/:codSeccion')
+    router.route('/ordenesFabricacion/buscarOperacionesEnSeccion/:id/:codSeccion')
         .get(ordenFabricacionRepository.buscarOperacionesEnSeccion);
 
-        router.route('/ordenesFabricacion/buscarTallasArticulo/:id')
+    router.route('/ordenesFabricacion/buscarTallasArticulo/:id')
         .get(ordenFabricacionRepository.buscarTallasArticulo);
 
-        router.route('/ordenesFabricacion/obtenerInformacionTareaPorOperacionYTalla/:idOperacion/:talla')
+    router.route('/ordenesFabricacion/obtenerInformacionTareaPorOperacionYTalla/:idOperacion/:talla')
         .get(ordenFabricacionRepository.obtenerInformacionTareaPorOperacionYTalla);
 }

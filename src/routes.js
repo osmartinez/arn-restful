@@ -17,7 +17,7 @@ function eRoutes() {
     var prepaquete = require('./repository/prepaquete/prepaquete.routes')(router);
     var talleres = require('./repository/taller/taller.routes')(router);
     var puestos = require('./repository/puesto/puesto.routes')(router);
-
+    var ordenFabricacionOperacion = require('./repository/ordenFabricacionOperacion/ordenFabricacionOperacion.routes')(router);
 
     // nosql
     require('./repository/movimientoOperario/movimientoOperario.routes')(router);
