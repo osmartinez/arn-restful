@@ -8,6 +8,10 @@ function UtillajeRepository(dbContext) {
         GenericRepository.execute(dbContext, req.params, SP.LocalizacionPorOrdenFabricacionSeccion, req,res,next)
     }
 
+    async function localizarPorOrdenFabricacionOperacionSeccion(req, res, next) {
+        GenericRepository.execute(dbContext, req.params, SP.LocalizacionPorOrdenFabricacionOperacionSeccion, req,res,next)
+    }
+
     async function localizarPorPrepaqueteSeccion(req, res, next) {
         GenericRepository.execute(dbContext, req.params, SP.LocalizacionPorPrepaqueteFabricacionSeccion, req,res,next)
     }
@@ -22,9 +26,11 @@ function UtillajeRepository(dbContext) {
 
     return {
         localizarPorOrdenFabricacionSeccion,
+        localizarPorOrdenFabricacionOperacionSeccion,
         localizarPorPrepaqueteSeccion,
         buscarImpresionMarcajePorUtillajeTalla,
         guardarImpresionMarcajePorUtillajeTalla,
+        
     }
 }
 

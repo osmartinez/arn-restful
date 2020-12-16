@@ -9,7 +9,15 @@ module.exports = {
         outputParams: [],
         multiFila: true,
     },
-
+    LocalizacionPorOrdenFabricacionOperacionSeccion: {
+        nombre: 'SP_ObtenerUbicacionesUtillajeOrdenFabricacionOperacion',
+        inputParams: [
+            { nombre: 'IdOperacion', match: 'idOperacion' },
+            { nombre: 'CodSeccion', match: 'codSeccion' },
+        ],
+        outputParams: [],
+        multiFila: true,
+    },
     LocalizacionPorPrepaqueteFabricacionSeccion: {
         nombre: 'SP_ObtenerUbicacionesUtillajePrepaquete',
         inputParams: [
