@@ -16,6 +16,9 @@ module.exports = function (router) {
     router.route('/stocks/buscarPorIdOrden/:idOrden')
         .get(stockRepository.buscarPorIdOrden);
 
+        router.route('/stocks/buscarPorIdOperacion/:idOperacion')
+        .get(stockRepository.buscarPorIdOperacion);
+
     router.route('/stocks/buscarStockTallas/:idStock')
         .get(stockRepository.buscarStockTallasPorStock);
 

@@ -20,6 +20,11 @@ function StockRepository(dbContext) {
         GenericRepository.execute(dbContext, req.params, SP.BuscarStockPorIdOrden, req,res,next)
     }
 
+    async function buscarPorIdOperacion(req, res, next) {
+        GenericRepository.execute(dbContext, req.params, SP.BuscarStockPorIdOperacion, req,res,next)
+    }
+
+
     async function buscarStockTallasPorStock(req, res, next) {
         GenericRepository.execute(dbContext, req.params, SP.BuscarStockTallasPorStock, req,res,next)
     }
@@ -58,6 +63,7 @@ function StockRepository(dbContext) {
         buscarStockTallasPorStock,
         buscarPorPrepaquete,
         buscarPorIdOrden,
+        buscarPorIdOperacion,
         buscarStockArticuloEnUbicacion,
         borrarStock,
         buscarCodigoArticuloPorOrdenFabricacion,

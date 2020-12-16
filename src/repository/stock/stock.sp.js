@@ -41,7 +41,14 @@ module.exports = {
         outputParams: [],
         multiFila: true,
     },
-
+    BuscarStockPorIdOperacion: {
+        nombre: 'SP_BuscarStockPorOrdenFabricacionOperacion',
+        inputParams: [
+            { nombre: 'IdOperacion', match: 'idOperacion' },
+        ],
+        outputParams: [],
+        multiFila: true,
+    },
     BuscarStockTallasPorStock: {
         nombre: 'SP_BuscarStockTallasPorStock',
         inputParams: [
