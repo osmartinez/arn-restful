@@ -18,6 +18,7 @@ function eRoutes() {
     var talleres = require('./repository/taller/taller.routes')(router);
     var puestos = require('./repository/puesto/puesto.routes')(router);
     var ordenFabricacionOperacion = require('./repository/ordenFabricacionOperacion/ordenFabricacionOperacion.routes')(router);
+    var bancadas = require('./repository/bancada/bancada.routes')(router);
 
     // nosql
     require('./repository/movimientoOperario/movimientoOperario.routes')(router);
