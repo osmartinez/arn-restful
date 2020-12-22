@@ -15,15 +15,15 @@ module.exports = {
 
     BuscarTodasEnSeccion: {
         nombre: 'SP_BuscarTodasMaquinasEnSeccion',
-        inputParams: [{nombre: 'CodSeccion', match: 'codSeccion'}],
+        inputParams: [{ nombre: 'CodSeccion', match: 'codSeccion' }],
         outputParams: [],
         multiFila: true,
     },
 
     AsociarAPuesto: {
         nombre: 'SP_MaquinaAsociarAPuesto',
-        inputParams: [{nombre: 'IdMaquina', match: 'idMaquina'},
-        {nombre: 'IdPuesto', match: 'idPuesto'}],
+        inputParams: [{ nombre: 'IdMaquina', match: 'idMaquina' },
+        { nombre: 'IdPuesto', match: 'idPuesto' }],
         outputParams: [],
         multiFila: true,
     },
@@ -31,25 +31,35 @@ module.exports = {
     DesasociarPuesto: {
         nombre: 'SP_MaquinaDesasociarPuesto',
         inputParams: [
-        {nombre: 'IdPuesto', match: 'idPuesto'}],
+            { nombre: 'IdPuesto', match: 'idPuesto' }],
         outputParams: [],
         multiFila: true,
     },
 
 
-    ActualizarConfiguracionesPines:{
+    ActualizarConfiguracionesPines: {
         nombre: 'SP_MaquinaActualizarConfiguracionPines',
         inputParams: [
-            {nombre: 'IdMaquina', match: 'idMaquina'},
-            {nombre: 'EsPulsoManual', match: 'esPulsoManual'},
-            {nombre: 'ProductoPorPulso', match: 'productoPorPulso'},
-            {nombre: 'PinPulso', match: 'pinPulso'},
-            {nombre: 'DescontarAuto', match: 'descontarAuto'},
-            {nombre: 'PinPulso2', match: 'pinPulso2'},
-            {nombre: 'ValorPulsoDependiente', match: 'valorPulsoDependiente'},
-            {nombre: 'ValorBouncingPulso', match: 'valorBouncingPulso'},
-            {nombre: 'DisparoPulso', match: 'disparoPulso'},
+            { nombre: 'IdMaquina', match: 'idMaquina' },
+            { nombre: 'EsPulsoManual', match: 'esPulsoManual' },
+            { nombre: 'ProductoPorPulso', match: 'productoPorPulso' },
+            { nombre: 'PinPulso', match: 'pinPulso' },
+            { nombre: 'DescontarAuto', match: 'descontarAuto' },
+            { nombre: 'PinPulso2', match: 'pinPulso2' },
+            { nombre: 'ValorPulsoDependiente', match: 'valorPulsoDependiente' },
+            { nombre: 'ValorBouncingPulso', match: 'valorBouncingPulso' },
+            { nombre: 'DisparoPulso', match: 'disparoPulso' },
 
+        ],
+        outputParams: [],
+        multiFila: false,
+    },
+    ActualizarPosicionUI: {
+        nombre: 'SP_MoldesActualizarPosicionUI',
+        inputParams: [
+            { nombre: 'IdMaquina', match: 'idMaquina' },
+            { nombre: 'UILeft', match: 'uiLeft' },
+            { nombre: 'UITop', match: 'uiTop' }
         ],
         outputParams: [],
         multiFila: false,

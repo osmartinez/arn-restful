@@ -27,6 +27,11 @@ function MaquinaRepository(dbContext) {
         GenericRepository.execute(dbContext, req.body, SP.ActualizarConfiguracionesPines, req,res,next)
     }
 
+    async function actualizarPosicionUI(req, res, next) {
+        console.log(req.body)
+        GenericRepository.execute(dbContext, req.body, SP.ActualizarPosicionUI, req, res, next)
+    }
+
     return {
         buscarPorCodigo,
         buscarTodas,
@@ -34,6 +39,7 @@ function MaquinaRepository(dbContext) {
         asociarAPuesto,
         actualizarConfiguracionPines,
         desasociarPuesto,
+        actualizarPosicionUI,
     }
 }
 
