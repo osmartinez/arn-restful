@@ -7,8 +7,13 @@ function OrdenFabricacionOperacionRepository(dbContext) {
         GenericRepository.execute(dbContext, req.query, SP.BuscarPorIdParaPuesto, req,res,next)
     }
 
+    async function buscarMaterias(req, res, next) {
+        GenericRepository.execute(dbContext, req.query, SP.BuscarMaterias, req,res,next)
+    }
+
     return {
         buscarPorIdParaPuesto,
+        buscarMaterias,
         
     }
 }

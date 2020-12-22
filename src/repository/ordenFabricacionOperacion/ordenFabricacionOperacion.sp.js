@@ -5,4 +5,10 @@ module.exports = {
         outputParams: [],
         multiFila: true,
     },
+    BuscarMaterias: {
+        nombre: 'SP_OrdenFabricacionOperacionBuscarMaterias',
+        inputParams: [{ nombre: 'IdOperacion', match: 'idOperacion' }],
+        outputParams: [],
+        multiFila: true,
+    },
 }

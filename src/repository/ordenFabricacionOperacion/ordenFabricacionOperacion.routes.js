@@ -7,4 +7,7 @@ module.exports = function (router) {
     router.route('/ordenFabricacionOperacion')
         .get(ordenFabricacionOperacionRepository.buscarPorIdParaPuesto);
 
+    router.route('/ordenFabricacionOperacion/materias')
+        .get(ordenFabricacionOperacionRepository.buscarMaterias);
+
 }
