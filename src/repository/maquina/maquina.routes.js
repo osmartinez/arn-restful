@@ -47,4 +47,11 @@ module.exports = function (router) {
     router.route('/maquinas/actualizarPosicionUI')
         .post(maquinaRepository.actualizarPosicionUI);
 
+
+    /**
+     * actualiza la posicion de una maquina en la interfaz
+     */
+    router.route('/maquinas/asignarTareaEjecucion')
+        .post(maquinaRepository.asignarTareaEjecucion);
+
 }

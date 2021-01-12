@@ -28,8 +28,11 @@ function MaquinaRepository(dbContext) {
     }
 
     async function actualizarPosicionUI(req, res, next) {
-        console.log(req.body)
         GenericRepository.execute(dbContext, req.body, SP.ActualizarPosicionUI, req, res, next)
+    }
+
+    async function asignarTareaEjecucion(req, res, next) {
+        GenericRepository.execute(dbContext, req.body, SP.AsignarTareaMaquina, req, res, next)
     }
 
     return {
@@ -40,6 +43,7 @@ function MaquinaRepository(dbContext) {
         actualizarConfiguracionPines,
         desasociarPuesto,
         actualizarPosicionUI,
+        asignarTareaEjecucion,
     }
 }
 

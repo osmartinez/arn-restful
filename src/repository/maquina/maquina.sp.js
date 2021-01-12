@@ -63,5 +63,14 @@ module.exports = {
         ],
         outputParams: [],
         multiFila: false,
+    },
+    AsignarTareaMaquina : {
+        nombre: 'SP_MaquinaAsignarTarea',
+        inputParams: [
+            { nombre: 'IdsTareas', match: 'idsTareas' },
+            { nombre: 'IdMaquina', match: 'idMaquina' },
+        ],
+        outputParams: [],
+        multiFila: true,
     }
 }
