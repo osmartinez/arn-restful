@@ -72,5 +72,14 @@ module.exports = {
         ],
         outputParams: [],
         multiFila: true,
+    },
+
+    ObtenerTodosMoldes : {
+        nombre: 'SP_MaquinasObtenerMoldes',
+        inputParams: [
+            
+        ],
+        outputParams: [],
+        multiFila: true,
     }
 }

@@ -54,4 +54,10 @@ module.exports = function (router) {
     router.route('/maquinas/asignarTareaEjecucion')
         .post(maquinaRepository.asignarTareaEjecucion);
 
+            /**
+     * actualiza la posicion de una maquina en la interfaz
+     */
+    router.route('/maquinas/obtenerTodosMoldes')
+    .get(maquinaRepository.obtenerTodosMoldes);
+
 }

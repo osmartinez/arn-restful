@@ -35,6 +35,11 @@ function MaquinaRepository(dbContext) {
         GenericRepository.execute(dbContext, req.body, SP.AsignarTareaMaquina, req, res, next)
     }
 
+    async function obtenerTodosMoldes(req, res, next) {
+        GenericRepository.execute(dbContext, req.params, SP.ObtenerTodosMoldes, req, res, next)
+    }
+
+
     return {
         buscarPorCodigo,
         buscarTodas,
@@ -44,6 +49,8 @@ function MaquinaRepository(dbContext) {
         desasociarPuesto,
         actualizarPosicionUI,
         asignarTareaEjecucion,
+        obtenerTodosMoldes,
+        
     }
 }
 
