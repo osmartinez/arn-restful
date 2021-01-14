@@ -57,7 +57,7 @@ module.exports = function (router) {
             /**
      * actualiza la posicion de una maquina en la interfaz
      */
-    router.route('/maquinas/obtenerTodosMoldes')
+    router.route('/maquinas/obtener/todosMoldes')
     .get(maquinaRepository.obtenerTodosMoldes);
 
 }
