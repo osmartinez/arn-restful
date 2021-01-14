@@ -1,6 +1,6 @@
 module.exports = {
     ListarTareasProgramadasEnMaquina: {
-        nombre: 'SP_ObtenerTareasProgramadasMaquina',
+        nombre: 'SP_ObtenerTareasProgramadasEnMaquina',
         inputParams: [{ nombre: 'CodigoMaquina', match: 'codigoMaquina' }],
         outputParams: [],
         multiFila: true,
@@ -41,8 +41,6 @@ module.exports = {
             { nombre: 'IdOrdenConsumir', match: 'idOrden' },
             { nombre: 'TallaConsumir', match: 'tallaConsumir' },
             { nombre: 'TallaUtillajeConsumir', match: 'tallaUtillajeConsumir' },
-
-
         ],
         outputParams: [],
         multiFila: true,
