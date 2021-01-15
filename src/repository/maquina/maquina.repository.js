@@ -35,6 +35,10 @@ function MaquinaRepository(dbContext) {
         GenericRepository.execute(dbContext, req.body, SP.AsignarTareaMaquina, req, res, next)
     }
 
+    async function desasignarTareaEjecucion(req, res, next) {
+        GenericRepository.execute(dbContext, req.body, SP.DesasignarTareaMaquina, req, res, next)
+    }
+
     async function programarTarea(req, res, next) {
         GenericRepository.execute(dbContext, req.body, SP.ProgramarTareaMaquina, req, res, next)
     }
@@ -65,6 +69,7 @@ function MaquinaRepository(dbContext) {
         programarTarea,
         verColaTrabajoPorCodigo,
         verColaTrabajoPorId,
+        desasignarTareaEjecucion,
     }
 }
 

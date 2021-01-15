@@ -76,6 +76,15 @@ module.exports = {
         outputParams: [],
         multiFila: true,
     },
+    DesasignarTareaMaquina : {
+        nombre: 'SP_MaquinaDesasignarTarea',
+        inputParams: [
+            { nombre: 'IdsTareas', match: 'idsTareas' },
+            { nombre: 'IdMaquina', match: 'idMaquina' },
+        ],
+        outputParams: [],
+        multiFila: true,
+    },
     ProgramarTareaMaquina : {
         nombre: 'SP_MaquinaProgramarTarea',
         inputParams: [

@@ -49,10 +49,17 @@ module.exports = function (router) {
 
 
     /**
-     * actualiza la posicion de una maquina en la interfaz
+     * pone una tarea al principio de la cola de tareas de maquina
      */
     router.route('/maquinas/asignarTareaEjecucion')
         .post(maquinaRepository.asignarTareaEjecucion);
+
+    /**
+     * quita una tarea de la cola de tareas de maquina
+     */
+    router.route('/maquinas/desasignarTareaEjecucion')
+        .post(maquinaRepository.desasignarTareaEjecucion);
+
 
     /**
 * programa una tarea en la cola de trabajo de una maquina en la ultima posicion
