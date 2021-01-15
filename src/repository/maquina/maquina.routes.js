@@ -54,10 +54,16 @@ module.exports = function (router) {
     router.route('/maquinas/asignarTareaEjecucion')
         .post(maquinaRepository.asignarTareaEjecucion);
 
-            /**
-     * actualiza la posicion de una maquina en la interfaz
-     */
+    /**
+* programa una tarea en la cola de trabajo de una maquina en la ultima posicion
+*/
+    router.route('/maquinas/programarTareaCola')
+        .post(maquinaRepository.programarTarea);
+
+    /**
+* actualiza la posicion de una maquina en la interfaz
+*/
     router.route('/maquinas/obtener/todosMoldes')
-    .get(maquinaRepository.obtenerTodosMoldes);
+        .get(maquinaRepository.obtenerTodosMoldes);
 
 }
