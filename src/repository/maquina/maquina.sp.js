@@ -88,6 +88,22 @@ module.exports = {
         outputParams: [],
         multiFila: true,
     },
+    VerProgramacionMaquinaPorId : {
+        nombre: 'SP_MaquinaVerColaTrabajoPorId',
+        inputParams: [
+            { nombre: 'IdMaquina', match: 'idMaquina' },
+        ],
+        outputParams: [],
+        multiFila: true,
+    },
+    VerProgramacionMaquinaPorCodigo : {
+        nombre: 'SP_MaquinaVerColaTrabajoPorCodigo',
+        inputParams: [
+            { nombre: 'CodigoEtiqueta', match: 'codigoEtiqueta' },
+        ],
+        outputParams: [],
+        multiFila: true,
+    },
     ObtenerTodosMoldes : {
         nombre: 'SP_MaquinasObtenerMoldes',
         inputParams: [

@@ -61,9 +61,21 @@ module.exports = function (router) {
         .post(maquinaRepository.programarTarea);
 
     /**
-* actualiza la posicion de una maquina en la interfaz
-*/
+    * actualiza la posicion de una maquina en la interfaz
+    */
     router.route('/maquinas/obtener/todosMoldes')
         .get(maquinaRepository.obtenerTodosMoldes);
+
+    /**
+     * obtiene cola de trabajo por id de maquina
+     */
+    router.route('/maquinas/colaTrabajo/verPorId')
+        .get(maquinaRepository.verColaTrabajoPorId);
+
+    /**
+     * obtiene cola de trabajo por codigo de etiqueta de maquina
+     */
+    router.route('/maquinas/colaTrabajo/verPorCodigo')
+        .get(maquinaRepository.verColaTrabajoPorCodigo);
 
 }

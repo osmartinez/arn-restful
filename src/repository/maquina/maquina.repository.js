@@ -43,6 +43,14 @@ function MaquinaRepository(dbContext) {
         GenericRepository.execute(dbContext, req.params, SP.ObtenerTodosMoldes, req, res, next)
     }
 
+    async function verColaTrabajoPorId(req, res, next) {
+        GenericRepository.execute(dbContext, req.query, SP.VerProgramacionMaquinaPorId, req, res, next)
+    }
+
+    async function verColaTrabajoPorCodigo(req, res, next) {
+        GenericRepository.execute(dbContext, req.query, SP.VerProgramacionMaquinaPorCodigo, req, res, next)
+    }
+
 
     return {
         buscarPorCodigo,
@@ -55,6 +63,8 @@ function MaquinaRepository(dbContext) {
         asignarTareaEjecucion,
         obtenerTodosMoldes,
         programarTarea,
+        verColaTrabajoPorCodigo,
+        verColaTrabajoPorId,
     }
 }
 
