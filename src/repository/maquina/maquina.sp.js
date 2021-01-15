@@ -69,6 +69,9 @@ module.exports = {
         inputParams: [
             { nombre: 'IdsTareas', match: 'idsTareas' },
             { nombre: 'IdMaquina', match: 'idMaquina' },
+            {nombre: 'Agrupacion', match: 'agrupacion'},
+            {nombre: 'IdOperarioEjecucion', match: 'idOperarioEjecucion'},
+
         ],
         outputParams: [],
         multiFila: true,
