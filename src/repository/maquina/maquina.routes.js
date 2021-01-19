@@ -62,8 +62,8 @@ module.exports = function (router) {
 
 
     /**
-* programa una tarea en la cola de trabajo de una maquina en la ultima posicion
-*/
+    * programa una tarea en la cola de trabajo de una maquina en la ultima posicion
+    */
     router.route('/maquinas/programarTareaCola')
         .post(maquinaRepository.programarTarea);
 

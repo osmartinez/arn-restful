@@ -11,4 +11,10 @@ module.exports = function (router) {
 
     router.route('/paquetes/buscarPorCodigoEtiqueta/:codigoEtiqueta')
         .get(paqueteRepository.buscarPorCodigoEtiqueta);
+
+    /**
+     * Genera un consumo interno a partir del cuerpo del mensaje
+     */
+    router.route('/paquetes/consumosInternos/:codigoEtiqueta')
+        .post(paqueteRepository.generarConsumoInterno);
 }

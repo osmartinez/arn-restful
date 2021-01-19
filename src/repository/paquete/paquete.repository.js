@@ -17,10 +17,15 @@ function PaqueteRepository(dbContext) {
         GenericRepository.execute(dbContext, req.params, SP.BuscarPorCodigoEtiqueta, req,res,next)
     }
 
+    async function generarConsumoInterno(req, res, next) {
+        GenericRepository.execute(dbContext, req.body, SP.GenerarConsumoInterno, req,res,next)
+    }
+
     return {
         buscarPorUbicacion,
         buscarPorCodigoEtiqueta,
         buscarPorAgrupacion,
+        generarConsumoInterno,
     }
 }
 
