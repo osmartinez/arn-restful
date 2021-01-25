@@ -41,6 +41,7 @@ module.exports = {
             { nombre: 'IdOrdenConsumir', match: 'idOrden' },
             { nombre: 'TallaConsumir', match: 'tallaConsumir' },
             { nombre: 'TallaUtillajeConsumir', match: 'tallaUtillajeConsumir' },
+            { nombre: 'IdObrero', match: 'idObrero' },
         ],
         outputParams: [],
         multiFila: true,
