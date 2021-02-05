@@ -120,5 +120,13 @@ module.exports = {
         ],
         outputParams: [],
         multiFila: true,
+    },
+    RegistrarHistoricoCiclo:{
+        nombre: 'SP_MaquinaRegistrarHistoricoCiclo',
+        inputParams: [
+            
+        ],
+        outputParams: [],
+        multiFila: true,
     }
 }

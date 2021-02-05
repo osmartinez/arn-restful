@@ -55,6 +55,9 @@ function MaquinaRepository(dbContext) {
         GenericRepository.execute(dbContext, req.query, SP.VerProgramacionMaquinaPorCodigo, req, res, next)
     }
 
+    async function registrarHistoricoCiclo(req, res, next) {
+        GenericRepository.execute(dbContext, req.body, SP.RegistrarHistoricoCiclo, req, res, next)
+    }
 
     return {
         buscarPorCodigo,
@@ -70,6 +73,7 @@ function MaquinaRepository(dbContext) {
         verColaTrabajoPorCodigo,
         verColaTrabajoPorId,
         desasignarTareaEjecucion,
+        registrarHistoricoCiclo,
     }
 }
 
