@@ -129,5 +129,33 @@ module.exports = {
         ],
         outputParams: [],
         multiFila: true,
+    },
+    RegistrarDato:{
+        nombre: 'SP_MaquinaRegistrarDato',
+        inputParams: [
+            { nombre: 'CodigoEtiqueta', match: 'codigoEtiqueta' },
+            { nombre: 'IdTarea', match: 'idTarea' },
+            { nombre: 'Productividad', match: 'productividad' },
+            { nombre: 'IpAutomata', match: 'ipAutomata' },
+            { nombre: 'Posicion', match: 'posicion' },
+            { nombre: 'IdOperacion', match: 'idOperacion' },
+            { nombre: 'CodigoOrden', match: 'codigoOrden' },
+            { nombre: 'IdOrden', match: 'idOrden' },
+            { nombre: 'Talla', match: 'talla' },
+            { nombre: 'TallaUtillaje', match: 'tallaUtillaje' },
+            { nombre: 'IdOperario', match: 'idOperario' },
+            { nombre: 'Ciclo', match: 'ciclo' },
+            { nombre: 'PiezaIntroducida', match: 'piezaIntroducida' },
+            { nombre: 'Pares', match: 'pares' },
+            { nombre: 'Year', match: 'year' },
+            { nombre: 'Month', match: 'month' },
+            { nombre: 'Day', match: 'day' },
+            { nombre: 'Hour', match: 'hour' },
+            { nombre: 'Minutes', match: 'minutes' },
+            { nombre: 'Seconds', match: 'seconds' },
+
+        ],
+        outputParams: [],
+        multiFila: false,
     }
 }

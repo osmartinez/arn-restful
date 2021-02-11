@@ -99,4 +99,11 @@ module.exports = function (router) {
   router
     .route("/maquinas/historicos/registrarHistorico")
     .post(maquinaRepository.registrarHistoricoCiclo);
+
+  /**
+   * crea un registro datos de una maquina
+   */
+  router
+  .route("/maquinas/historicos/registrarDato")
+  .post(maquinaRepository.registrarDato);
 };
