@@ -11,6 +11,14 @@ module.exports = function (router) {
     .route("/barquillas/buscarOperacionesEnSeccion/:codigoEtiqueta/:codigoSeccion")
     .get(barquillaRepo.buscarOperacionesEnSeccion);
 
+    /**
+   * Busca las informacion de barquilla en una seccion
+   */
+  router
+    .route("/barquillas/buscarInformacionEnSeccion/:codigoEtiqueta/:codigoSeccion")
+    .get(barquillaRepo.buscarInformacionEnSeccion);
+
+
   /**
    * Busca las operaciones en una seccion de una etiqueta
    */

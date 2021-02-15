@@ -6,6 +6,13 @@ module.exports = {
         outputParams: [],
         multiFila: true,
     },
+    BuscarInformacionEnSeccion: {
+        nombre: 'SP_BarquillaBuscarInformacionEnSeccion',
+        inputParams: [{ nombre: 'CodigoEtiqueta', match: 'CodigoEtiqueta' },
+        { nombre: 'CodigoSeccion', match: 'codigoSeccion' }],
+        outputParams: [],
+        multiFila: true,
+    },
     ConsumirBarquillaOperacion: {
         nombre: 'SP_BarquillaConsumirEnSeccion',
         inputParams: [
