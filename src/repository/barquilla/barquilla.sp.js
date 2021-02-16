@@ -1,14 +1,14 @@
 module.exports = {
     BuscarOperacionesEnSeccion: {
         nombre: 'SP_BarquillaBuscarEnSeccion',
-        inputParams: [{ nombre: 'CodigoEtiqueta', match: 'CodigoEtiqueta' },
+        inputParams: [{ nombre: 'CodigoEtiqueta', match: 'codigoEtiqueta' },
         { nombre: 'CodigoSeccion', match: 'codigoSeccion' }],
         outputParams: [],
         multiFila: true,
     },
     BuscarInformacionEnSeccion: {
         nombre: 'SP_BarquillaBuscarInformacionEnSeccion',
-        inputParams: [{ nombre: 'CodigoEtiqueta', match: 'CodigoEtiqueta' },
+        inputParams: [{ nombre: 'CodigoEtiqueta', match: 'codigoEtiqueta' },
         { nombre: 'CodigoSeccion', match: 'codigoSeccion' }],
         outputParams: [],
         multiFila: true,
