@@ -27,4 +27,14 @@ module.exports = {
         outputParams: [],
         multiFila: true,
     },
+    ObtenerSiguienteOrdenAgrupacion: {
+        nombre: 'SP_BarquillaObtenerSiguienteOrdenAgrupacion',
+        inputParams: [
+            { nombre: 'CodigoEtiqueta', match: 'codigoEtiqueta' },
+            { nombre: 'IdOrdenAnterior', match: 'idOrdenAnterior' },
+            { nombre: 'IdOperacionAnterior', match: 'idOperacionAnterior' },
+        ],
+        outputParams: [],
+        multiFila: false,
+    },
 }

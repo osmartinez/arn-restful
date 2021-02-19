@@ -26,4 +26,11 @@ module.exports = function (router) {
     .route("/barquillas/consumirOperacion")
     .post(barquillaRepo.consumirBarquilla);
 
+  /**
+   * Busca las operaciones en una seccion de una etiqueta
+   */
+  router
+  .route("/barquillas/obtenerSiguienteOrdenAgrupacion")
+  .post(barquillaRepo.obtenerSiguienteOrdenAgrupacion);
+
 };
