@@ -13,6 +13,10 @@ module.exports = function (router) {
     router.route('/utillajes/localizarPorPrepaqueteSeccion/:codigoPrepaquete/:codSeccion')
         .get(utillajeRepository.localizarPorPrepaqueteSeccion);
 
+        router.route('/utillajes/localizarPorBarquillaSeccion/:codigoPrepaquete/:codSeccion')
+        .get(utillajeRepository.localizarPorBarquillaSeccion);
+
+
     router.route('/utillajes/buscarImpresionMarcajePorUtillajeTalla/:codigoUtillaje/:talla')
         .get(utillajeRepository.buscarImpresionMarcajePorUtillajeTalla);
 

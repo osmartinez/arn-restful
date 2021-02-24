@@ -27,6 +27,16 @@ module.exports = {
         outputParams: [],
         multiFila: true,
     },
+    LocalizacionPorBarquillaFabricacionSeccion: {
+        nombre: 'SP_ObtenerUbicacionesUtillajeBarquilla',
+        inputParams: [
+            { nombre: 'CodigoPrepaquete', match: 'codigoPrepaquete' },
+            { nombre: 'CodSeccion', match: 'codSeccion' },
+        ],
+        outputParams: [],
+        multiFila: true,
+    },
+
 
     BuscarImpresionMarcajePorUtillajeTalla:{
         nombre: 'SP_BuscarImpresionMarcajePorUtillajeTalla',

@@ -16,6 +16,11 @@ function UtillajeRepository(dbContext) {
         GenericRepository.execute(dbContext, req.params, SP.LocalizacionPorPrepaqueteFabricacionSeccion, req,res,next)
     }
 
+    async function localizarPorBarquillaSeccion(req, res, next) {
+        GenericRepository.execute(dbContext, req.params, SP.LocalizacionPorBarquillaFabricacionSeccion, req,res,next)
+    }
+
+
     async function buscarImpresionMarcajePorUtillajeTalla(req, res, next) {
         GenericRepository.execute(dbContext, req.params, SP.BuscarImpresionMarcajePorUtillajeTalla, req,res,next)
     }
@@ -30,6 +35,7 @@ function UtillajeRepository(dbContext) {
         localizarPorPrepaqueteSeccion,
         buscarImpresionMarcajePorUtillajeTalla,
         guardarImpresionMarcajePorUtillajeTalla,
+        localizarPorBarquillaSeccion,
         
     }
 }
