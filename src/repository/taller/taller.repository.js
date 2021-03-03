@@ -15,10 +15,20 @@ function TallerRepository(dbContext) {
         GenericRepository.execute(dbContext, req.params, SP.RecibirPrepaquete, req,res,next)
     }
 
+    async function enviarBarquilla(req, res, next) {
+        GenericRepository.execute(dbContext, req.params, SP.EnviarBarquilla, req,res,next)
+    }
+
+    async function recibirBarquilla(req, res, next) {
+        GenericRepository.execute(dbContext, req.params, SP.RecibirBarquilla, req,res,next)
+    }
+
     return {
         buscarTodos,
         enviarPrepaquete,
-        recibirPrepaquete
+        recibirPrepaquete,
+        recibirBarquilla,
+        enviarBarquilla,
         
     }
 }
