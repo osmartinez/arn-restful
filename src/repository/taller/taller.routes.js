@@ -7,10 +7,10 @@ module.exports = function (router) {
   router.route("/talleres").get(tallerRepository.buscarTodos);
 
   router
-    .route("/talleres/recibir/:idTaller/:codPrepaquete/:codSeccion")
+    .route("/talleres/recibir/:idTaller/:codBarquilla/:codSeccion")
     .get(tallerRepository.recibirBarquilla);
 
   router
-    .route("/talleres/leer/:idTaller/:codPrepaquete/:codSeccion")
+    .route("/talleres/leer/:idTaller/:codBarquilla/:codSeccion")
     .get(tallerRepository.enviarBarquilla);
 };
