@@ -5,6 +5,14 @@ module.exports = function (router) {
   const barquillaRepo = BarquillaRepository(dbContext);
 
   /**
+   * Busca barquilla por codigo
+   */
+  router
+    .route("/barquillas/:codigoEtiqueta")
+    .get(barquillaRepo.buscarPorCodigo);
+
+
+  /**
    * Busca las operaciones en una seccion de una etiqueta
    */
   router

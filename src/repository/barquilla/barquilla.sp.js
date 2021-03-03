@@ -1,4 +1,11 @@
 module.exports = {
+    BuscarPorCodigo: {
+        nombre: 'SP_BarquillaBuscarPorCodigo',
+        inputParams: [{ nombre: 'CodigoEtiqueta', match: 'codigoEtiqueta' },
+        ],
+        outputParams: [],
+        multiFila: true,
+    },
     BuscarOperacionesEnSeccion: {
         nombre: 'SP_BarquillaBuscarEnSeccion',
         inputParams: [{ nombre: 'CodigoEtiqueta', match: 'codigoEtiqueta' },
