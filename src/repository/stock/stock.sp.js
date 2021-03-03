@@ -33,6 +33,14 @@ module.exports = {
         outputParams: [],
         multiFila: true,
     },
+    BuscarStockPorBarquilla: {
+        nombre: 'SP_BuscarStockPorBarquilla',
+        inputParams: [
+            { nombre: 'CodigoBarquilla', match: 'codigoBarquilla' },
+        ],
+        outputParams: [],
+        multiFila: true,
+    },
     BuscarStockPorIdOrden: {
         nombre: 'SP_BuscarStockPorOrdenFabricacion',
         inputParams: [
