@@ -8,7 +8,7 @@ module.exports = function (router) {
    * Busca la bancada con id :id
    * bancadas/10
    */
-  router.route("/bancadas/:id").get(bancadaRepository.buscarPorId);
+  router.route("/bancadas").get(bancadaRepository.buscarPorId);
 
   /**
    * Busca las maquinas pertenecientes a la bancada con id dado
