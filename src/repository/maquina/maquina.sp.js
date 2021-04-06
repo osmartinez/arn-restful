@@ -65,9 +65,9 @@ module.exports = {
         multiFila: false,
     },
     AsignarTareaMaquina : {
-        nombre: 'SP_MaquinaAsignarTarea',
+        nombre: 'SP_MaquinaColaEjecutarTarea',
         inputParams: [
-            { nombre: 'IdsTareas', match: 'idsTareas' },
+            { nombre: 'IdTarea', match: 'idTarea' },
             { nombre: 'IdMaquina', match: 'idMaquina' },
             {nombre: 'Agrupacion', match: 'agrupacion'},
             {nombre: 'IdOperarioEjecucion', match: 'idOperarioEjecucion'},
@@ -76,21 +76,32 @@ module.exports = {
         outputParams: [],
         multiFila: true,
     },
-    DesasignarTareaMaquina : {
-        nombre: 'SP_MaquinaDesasignarTarea',
+    ActualizarPosicionTareaMaquina : {
+        nombre: 'SP_MaquinaColaActualizarPosicion',
         inputParams: [
-            { nombre: 'IdsTareas', match: 'idsTareas' },
+            { nombre: 'IdTarea', match: 'idTarea' },
+            { nombre: 'IdMaquina', match: 'idMaquina' },
+            {nombre: 'Posicion', match: 'posicion'},
+        ],
+        outputParams: [],
+        multiFila: true,
+    },
+    DesasignarTareaMaquina : {
+        nombre: 'SP_MaquinaColaDesprogramarTarea',
+        inputParams: [
+            { nombre: 'IdTarea', match: 'idTarea' },
             { nombre: 'IdMaquina', match: 'idMaquina' },
         ],
         outputParams: [],
         multiFila: true,
     },
     ProgramarTareaMaquina : {
-        nombre: 'SP_MaquinaProgramarTarea',
+        nombre: 'SP_MaquinaColaProgramarTarea',
         inputParams: [
-            { nombre: 'IdsTareas', match: 'idsTareas' },
+            { nombre: 'IdTarea', match: 'idTarea' },
             { nombre: 'IdMaquina', match: 'idMaquina' },
             {nombre: 'Agrupacion', match: 'agrupacion'},
+            {nombre: 'Posicion', match: 'posicion'},
             {nombre: 'IdOperarioPrograma', match: 'idOperarioPrograma'},
 
         ],
