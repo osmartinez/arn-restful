@@ -43,6 +43,10 @@ function MaquinaRepository(dbContext) {
         GenericRepository.execute(dbContext, req.body, SP.ProgramarTareaMaquina, req, res, next)
     }
 
+    async function actualizarPosicionTarea(req, res, next) {
+        GenericRepository.execute(dbContext, req.body, SP.ActualizarPosicionTareaMaquina, req, res, next)
+    }
+
     async function obtenerTodosMoldes(req, res, next) {
         GenericRepository.execute(dbContext, req.params, SP.ObtenerTodosMoldes, req, res, next)
     }
@@ -79,6 +83,7 @@ function MaquinaRepository(dbContext) {
         desasignarTareaEjecucion,
         registrarHistoricoCiclo,
         registrarDato,
+        actualizarPosicionTarea,
     }
 }
 
