@@ -29,6 +29,23 @@ function UtillajeRepository(dbContext) {
         GenericRepository.execute(dbContext, req.body, SP.GuardarImpresionMarcajePorUtillajeTalla, req,res,next)
     }
 
+    async function buscarPorBarquilla(req, res, next) {
+        GenericRepository.execute(dbContext, req.params, SP.BuscarUbicacionUtillajesPorBarquilla, req,res,next)
+    }
+
+    async function buscarPorOperacion(req, res, next) {
+        GenericRepository.execute(dbContext, req.params, SP.BuscarUbicacionUtillajesPorOperacion, req,res,next)
+    }
+
+    async function buscarPorCodigoUtillaje(req, res, next) {
+        GenericRepository.execute(dbContext, req.params, SP.BuscarUbicacionUtillajesPorCodUtillaje, req,res,next)
+    }
+
+    async function ubicarPorEtiqueta(req, res, next) {
+        GenericRepository.execute(dbContext, req.body, SP.UbicarPorCodigoEtiqueta, req,res,next)
+    }
+
+
     return {
         localizarPorOrdenFabricacionSeccion,
         localizarPorOrdenFabricacionOperacionSeccion,
@@ -36,7 +53,10 @@ function UtillajeRepository(dbContext) {
         buscarImpresionMarcajePorUtillajeTalla,
         guardarImpresionMarcajePorUtillajeTalla,
         localizarPorBarquillaSeccion,
-        
+        buscarPorBarquilla,
+        buscarPorOperacion,
+        buscarPorCodigoUtillaje,
+        ubicarPorEtiqueta,
     }
 }
 
