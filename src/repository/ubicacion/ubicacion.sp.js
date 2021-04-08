@@ -64,5 +64,16 @@ module.exports = {
         multiFila: true,
     },
 
+    UbicarBarquilla:{
+        nombre: 'SP_BarquillaUbicar',
+        inputParams: [
+            { nombre: 'CodigoEtiqueta', match: 'codigoEtiqueta' },
+            { nombre: 'CodUbicacion', match: 'codUbicacion' },
+
+        ],
+        outputParams: [],
+        multiFila: false,
+    }
+
 
 }

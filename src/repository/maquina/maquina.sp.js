@@ -101,9 +101,7 @@ module.exports = {
             { nombre: 'IdTarea', match: 'idTarea' },
             { nombre: 'IdMaquina', match: 'idMaquina' },
             {nombre: 'Agrupacion', match: 'agrupacion'},
-            {nombre: 'Posicion', match: 'posicion'},
             {nombre: 'IdOperarioPrograma', match: 'idOperarioPrograma'},
-
         ],
         outputParams: [],
         multiFila: true,
