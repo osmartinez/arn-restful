@@ -71,7 +71,15 @@ module.exports = {
             { nombre: 'Talla', match: 'talla' },],
         outputParams: [],
         multiFila: true,
+    },
+
+
+    ObtenerUbicacionesTareaPorBarquilla:{
+        nombre: 'SP_OrdenFabricacionBuscarUbicacionesTareasPorBarquilla',
+        inputParams: [
+            { nombre: 'CodigoEtiqueta', match: 'codigoEtiqueta' },
+        ],
+        outputParams: [],
+        multiFila: true,
     }
-
-
 }
