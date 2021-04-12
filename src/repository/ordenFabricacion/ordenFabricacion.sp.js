@@ -81,5 +81,14 @@ module.exports = {
         ],
         outputParams: [],
         multiFila: true,
+    },
+
+    ObtenerOperacionesPorBarquilla:{
+        nombre: 'SP_OrdenFabricacionObtenerOperacionesPorBarquilla',
+        inputParams: [
+            { nombre: 'CodigoEtiqueta', match: 'codigoEtiqueta' },
+        ],
+        outputParams: [],
+        multiFila: true,
     }
 }

@@ -45,4 +45,11 @@ module.exports = function (router) {
       "/ordenesFabricacion/obtenerUbicacionesTareaPorBarquilla/:codigoEtiqueta"
     )
     .get(ordenFabricacionRepository.obtenerUbicacionesTareaPorBarquilla);
-};
+
+    router
+    .route(
+      "/ordenesFabricacion/obtenerOperacionesPorBarquilla/:codigoEtiqueta"
+    )
+    .get(ordenFabricacionRepository.obtenerOperacionesPorBarquilla);
+
+  };
