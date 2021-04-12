@@ -42,7 +42,7 @@ module.exports = function (router) {
 
   router
     .route(
-      "/ordenesFabricacion/obtenerUbicacionesTareaPorBarquilla/:codigoEtiqueta"
+      "/ordenesFabricacion/obtenerUbicacionesTareaPorBarquilla/:codigoEtiqueta/:codSeccion"
     )
     .get(ordenFabricacionRepository.obtenerUbicacionesTareaPorBarquilla);
 

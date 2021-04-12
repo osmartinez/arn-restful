@@ -78,6 +78,8 @@ module.exports = {
         nombre: 'SP_OrdenFabricacionBuscarUbicacionesTareasPorBarquilla',
         inputParams: [
             { nombre: 'CodigoEtiqueta', match: 'codigoEtiqueta' },
+            { nombre: 'CodSeccion', match: 'codSeccion' },
+
         ],
         outputParams: [],
         multiFila: true,
