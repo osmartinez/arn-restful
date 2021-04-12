@@ -1,4 +1,7 @@
-
+// Add this to the VERY top of the first file loaded in your app
+var apm = require('elastic-apm-node').start({
+    serviceName: 'arn-restful',
+})
 
 const express = require('express');
 const bodyParser = require('body-parser');
