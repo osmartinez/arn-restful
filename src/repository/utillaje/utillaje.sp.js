@@ -68,7 +68,7 @@ module.exports = {
             { nombre: 'CodigoEtiqueta', match: 'CodigoEtiqueta' },
         ],
         outputParams:[],
-        multifila: false,
+        multiFila: false,
     },
     BuscarUbicacionUtillajesPorBarquilla:{
         nombre: 'SP_UtillajeTallaColeccionBuscarPorBarquilla',
@@ -76,7 +76,7 @@ module.exports = {
             { nombre: 'CodigoEtiqueta', match: 'codigoEtiqueta' },
         ],
         outputParams:[],
-        multifila: true,
+        multiFila: true,
     },
     BuscarUbicacionUtillajesPorOperacion:{
         nombre: 'SP_UtillajeTallaColeccionBuscarPorIdOperacion',
@@ -84,7 +84,7 @@ module.exports = {
             { nombre: 'IdOperacion', match: 'idOperacion' },
         ],
         outputParams:[],
-        multifila: true,
+        multiFila: true,
     },
     BuscarUbicacionUtillajesPorCodUtillaje:{
         nombre: 'SP_UtillajeTallaColeccionBuscarPorIdOperacion',
@@ -92,7 +92,7 @@ module.exports = {
             { nombre: 'CodUtillaje', match: 'codUtillaje' },
         ],
         outputParams:[],
-        multifila: true,
+        multiFila: true,
     },
    
 
