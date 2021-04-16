@@ -64,8 +64,8 @@ module.exports = {
     UbicarPorCodigoEtiqueta:{
         nombre: 'SP_UtillajeTallaColeccionUbicar',
         inputParams: [
-            { nombre: 'CodUbicacion', match: 'codUbicacion' },
-            { nombre: 'CodigoEtiqueta', match: 'codigoEtiqueta' },
+            { nombre: 'CodUbicacion', match: 'CodUbicacion' },
+            { nombre: 'CodigoEtiqueta', match: 'CodigoEtiqueta' },
         ],
         outputParams:[],
         multifila: false,
