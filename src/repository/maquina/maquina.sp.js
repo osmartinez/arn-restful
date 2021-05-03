@@ -132,6 +132,14 @@ module.exports = {
         outputParams: [],
         multiFila: true,
     },
+    ObtenerTodosIOT : {
+        nombre: 'SP_MaquinasObtenerPuestosIOT',
+        inputParams: [
+            
+        ],
+        outputParams: [],
+        multiFila: true,
+    },
     RegistrarHistoricoCiclo:{
         nombre: 'SP_MaquinaRegistrarHistoricoCiclo',
         inputParams: [

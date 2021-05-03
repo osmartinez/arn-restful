@@ -87,6 +87,11 @@ module.exports = function (router) {
     .route("/maquinas/obtener/todosMoldes")
     .get(maquinaRepository.obtenerTodosMoldes);
 
+    router
+    .route("/maquinas/obtener/todosIOT")
+    .get(maquinaRepository.obtenerIOT);
+
+
   /**
    * obtiene cola de trabajo por id de maquina
    */

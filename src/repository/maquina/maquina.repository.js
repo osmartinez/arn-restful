@@ -51,6 +51,10 @@ function MaquinaRepository(dbContext) {
         GenericRepository.execute(dbContext, req.params, SP.ObtenerTodosMoldes, req, res, next)
     }
 
+    async function obtenerIOT(req, res, next) {
+        GenericRepository.execute(dbContext, req.params, SP.ObtenerTodosIOT, req, res, next)
+    }
+
     async function verColaTrabajoPorId(req, res, next) {
         GenericRepository.execute(dbContext, req.query, SP.VerProgramacionMaquinaPorId, req, res, next)
     }
@@ -93,7 +97,7 @@ function MaquinaRepository(dbContext) {
         actualizarPosicionTarea,
         obtenerTareaEjecucionPorIdMaquina,
         obtenerTareaEjecucionPorIpAutomataPosicion,
-        
+        obtenerIOT,
     }
 }
 
