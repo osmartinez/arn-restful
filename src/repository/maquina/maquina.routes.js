@@ -114,4 +114,21 @@ module.exports = function (router) {
   router
   .route("/maquinas/historicos/registrarDato")
   .post(maquinaRepository.registrarDato);
+
+
+    /**
+   * obtiene la tarea en ejecucion de una maquina desde su id
+   */
+     router
+     .route("/maquinas/colaTrabajo/tareaEjecucionPorIdMaquina/:idMaquina")
+     .get(maquinaRepository.obtenerTareaEjecucionPorIdMaquina);
+
+
+    /**
+   * obtiene la tarea en ejecucion de una maquina desde su id
+   */
+     router
+     .route("/maquinas/colaTrabajo/tareaEjecucionPorIpAutomataPosicion/:ipAutomata/:posicion")
+     .get(maquinaRepository.obtenerTareaEjecucionPorIpAutomataPosicion);
+
 };

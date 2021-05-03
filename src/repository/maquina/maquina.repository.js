@@ -67,6 +67,13 @@ function MaquinaRepository(dbContext) {
         GenericRepository.execute(dbContext, req.body, SP.RegistrarDato, req, res, next)
     }
 
+    async function obtenerTareaEjecucionPorIdMaquina(req, res, next) {
+        GenericRepository.execute(dbContext, req.params, SP.ObtenerTareaEjecucionPorIdMaquina, req, res, next)
+    }
+
+    async function obtenerTareaEjecucionPorIpAutomataPosicion(req, res, next) {
+        GenericRepository.execute(dbContext, req.params, SP.ObtenerTareaEjecucionPorIpAutomataPosicion, req, res, next)
+    }
     return {
         buscarPorCodigo,
         buscarTodas,
@@ -84,6 +91,9 @@ function MaquinaRepository(dbContext) {
         registrarHistoricoCiclo,
         registrarDato,
         actualizarPosicionTarea,
+        obtenerTareaEjecucionPorIdMaquina,
+        obtenerTareaEjecucionPorIpAutomataPosicion,
+        
     }
 }
 

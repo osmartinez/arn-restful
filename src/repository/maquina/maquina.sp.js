@@ -168,5 +168,22 @@ module.exports = {
         ],
         outputParams: [],
         multiFila: false,
-    }
+    },
+    ObtenerTareaEjecucionPorIdMaquina:{
+        nombre: 'SP_MaquinaColaObtenerTareaEjecucionPorId',
+        inputParams: [
+            { nombre: 'IdMaquina', match: 'idMaquina' },
+        ],
+        outputParams: [],
+        multiFila: false,
+    },
+    ObtenerTareaEjecucionPorIpAutomataPosicion:{
+        nombre: 'SP_MaquinaColaObtenerTareaEjecucionPorIpAutomataPosicion',
+        inputParams: [
+            { nombre: 'IpAutomata', match: 'ipAutomata' },
+            { nombre: 'Posicion', match: 'posicion' },
+        ],
+        outputParams: [],
+        multiFila: false,
+    },
 }
