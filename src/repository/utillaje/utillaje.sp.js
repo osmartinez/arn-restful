@@ -95,7 +95,27 @@ module.exports = {
         multiFila: true,
     },
    
+    UtillajeTallaColeccionDarAlta:{
+        nombre: 'SP_UtillajeTallaColeccionDarAlta',
+        inputParams: [
+            { nombre: 'CodigoEtiqueta', match: 'codigoEtiqueta' },
+            { nombre: 'Talla', match: 'talla' },
+            { nombre: 'CodUtillaje', match: 'codUtillaje' },
+            { nombre: 'IdContenedor', match: 'idContenedor' },
 
+        ],
+        outputParams:[],
+        multiFila: false,
+    },
+
+    UtillajeTallaColeccionBuscarPorCodigoEtiqueta:{
+        nombre: 'SP_UtillajeTallaColeccionBuscarPorCodigoEtiqueta',
+        inputParams: [
+            { nombre: 'CodigoEtiqueta', match: 'codigoEtiqueta' },
+        ],
+        outputParams:[],
+        multiFila: false,
+    },
 
 
 }

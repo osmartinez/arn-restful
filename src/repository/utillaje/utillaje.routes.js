@@ -50,7 +50,15 @@ module.exports = function (router) {
     .route("/utillajes/buscarUbicaciones/porCodigoUtillaje/:codUtillaje")
     .get(utillajeRepository.buscarPorCodigoUtillaje);
 
-    router
+  router
     .route("/utillajes/ubicar/porEtiqueta")
     .post(utillajeRepository.ubicarPorEtiqueta);
+
+  router
+    .route("/utillajes/alta/altaEjemplar")
+    .post(utillajeRepository.ejemplarDarAlta);
+
+  router
+    .route("/utillajes/buscar/ejemplar/:codigoEtiqueta")
+    .get(utillajeRepository.ejemplarBuscarPorCodigoEtiqueta);
 };

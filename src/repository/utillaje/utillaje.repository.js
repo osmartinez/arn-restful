@@ -45,6 +45,16 @@ function UtillajeRepository(dbContext) {
         GenericRepository.execute(dbContext, req.body, SP.UbicarPorCodigoEtiqueta, req,res,next)
     }
 
+    async function ejemplarDarAlta(req, res, next) {
+        GenericRepository.execute(dbContext, req.body, SP.UtillajeTallaColeccionDarAlta, req,res,next)
+    }
+
+
+    async function ejemplarBuscarPorCodigoEtiqueta(req, res, next) {
+        GenericRepository.execute(dbContext, req.params, SP.UtillajeTallaColeccionBuscarPorCodigoEtiqueta, req,res,next)
+    }
+
+
 
     return {
         localizarPorOrdenFabricacionSeccion,
@@ -57,6 +67,9 @@ function UtillajeRepository(dbContext) {
         buscarPorOperacion,
         buscarPorCodigoUtillaje,
         ubicarPorEtiqueta,
+        ejemplarDarAlta,
+        ejemplarBuscarPorCodigoEtiqueta,
+        
     }
 }
 
