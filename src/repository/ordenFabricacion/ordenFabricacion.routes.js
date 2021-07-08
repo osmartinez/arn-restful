@@ -55,7 +55,7 @@ module.exports = function (router) {
 
     router
     .route(
-      "/ordenesFabricacion/reservarStock/:idOpepracion"
+      "/ordenesFabricacion/reservarStock/:idOperacion"
     )
     .get(ordenFabricacionRepository.reservarStock);
 
