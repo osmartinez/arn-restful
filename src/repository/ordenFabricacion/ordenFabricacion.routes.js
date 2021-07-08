@@ -52,4 +52,11 @@ module.exports = function (router) {
     )
     .get(ordenFabricacionRepository.obtenerOperacionesPorBarquilla);
 
+
+    router
+    .route(
+      "/ordenesFabricacion/reservarStock/:idOpepracion"
+    )
+    .get(ordenFabricacionRepository.reservarStock);
+
   };

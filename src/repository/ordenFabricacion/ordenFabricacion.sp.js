@@ -92,5 +92,14 @@ module.exports = {
         ],
         outputParams: [],
         multiFila: true,
+    },
+
+    ReservarStock:{
+        nombre: 'SP_OrdenFabricacionReservarStock',
+        inputParams: [
+            { nombre: 'IdOperacion', match: 'idOperacion' },
+        ],
+        outputParams: [],
+        multiFila: false,
     }
 }
